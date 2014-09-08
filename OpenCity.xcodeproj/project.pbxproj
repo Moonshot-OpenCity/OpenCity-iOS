@@ -35,6 +35,7 @@
 		F0F3A01A19BE3D3E00CCDCB8 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F3A01919BE3D3E00CCDCB8 /* OpenGLES.framework */; };
 		F0F3A01C19BE3D4300CCDCB8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F3A01B19BE3D4300CCDCB8 /* QuartzCore.framework */; };
 		F0F3A01E19BE3D4B00CCDCB8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F3A01D19BE3D4B00CCDCB8 /* SystemConfiguration.framework */; };
+		F0F3A02019BE442800CCDCB8 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F3A01F19BE442800CCDCB8 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		F0F3A01919BE3D3E00CCDCB8 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		F0F3A01B19BE3D4300CCDCB8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F0F3A01D19BE3D4B00CCDCB8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F0F3A01F19BE442800CCDCB8 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				F0F3A01419BE3D2500CCDCB8 /* libc++.dylib in Frameworks */,
 				F0F3A01219BE3D1B00CCDCB8 /* ImageIO.framework in Frameworks */,
 				F0F3A01019BE3D1500CCDCB8 /* GLKit.framework in Frameworks */,
+				F0F3A02019BE442800CCDCB8 /* FacebookSDK.framework in Frameworks */,
 				F0F3A00E19BE3D1000CCDCB8 /* CoreText.framework in Frameworks */,
 				F0F3A00C19BE3D0B00CCDCB8 /* CoreLocation.framework in Frameworks */,
 				F0F3A00A19BE3D0300CCDCB8 /* CoreData.framework in Frameworks */,
@@ -142,6 +145,7 @@
 		F0E2CFFE19BB394E000D22B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F0F3A01F19BE442800CCDCB8 /* FacebookSDK.framework */,
 				F0F3A01D19BE3D4B00CCDCB8 /* SystemConfiguration.framework */,
 				F0F3A01B19BE3D4300CCDCB8 /* QuartzCore.framework */,
 				F0F3A01919BE3D3E00CCDCB8 /* OpenGLES.framework */,
@@ -434,9 +438,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/Apollo/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenCity/OpenCity-Prefix.pch";
@@ -451,9 +457,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/Apollo/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenCity/OpenCity-Prefix.pch";
