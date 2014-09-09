@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+
 
 @interface ViewController : UIViewController
+
+-(CAGradientLayer*)blueGradient;
+-(void)aTime;
+
+@property (strong, nonatomic) IBOutlet UIImageView *logo;
 
 @end
