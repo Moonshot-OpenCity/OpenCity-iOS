@@ -30,6 +30,13 @@
 		F052CCDC19BF3D8300A82D01 /* OpenCity-Icon-640.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CCC919BF3D8300A82D01 /* OpenCity-Icon-640.png */; };
 		F052CCDD19BF3D8300A82D01 /* OpenCity-Icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CCCA19BF3D8300A82D01 /* OpenCity-Icon-1024.png */; };
 		F052CCE319BF49F700A82D01 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F052CCE219BF49F700A82D01 /* SWRevealViewController.m */; };
+		F052CCF019BF53F800A82D01 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CCEF19BF53F800A82D01 /* background.png */; };
+		F052CCF919C0365B00A82D01 /* tableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F052CCF819C0365B00A82D01 /* tableVC.m */; };
+		F052CCFC19C03C8300A82D01 /* mainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F052CCFB19C03C8300A82D01 /* mainViewController.m */; };
+		F052CD0019C049F800A82D01 /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CCFF19C049F800A82D01 /* reveal-icon.png */; };
+		F052CD0219C04CC300A82D01 /* dashboard-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CD0119C04CC300A82D01 /* dashboard-icon.png */; };
+		F052CD0419C0517B00A82D01 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CD0319C0517B00A82D01 /* map.png */; };
+		F052CD0619C0523800A82D01 /* placeholder.gif in Resources */ = {isa = PBXBuildFile; fileRef = F052CD0519C0523800A82D01 /* placeholder.gif */; };
 		F0E2D00019BB394E000D22B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E2CFFF19BB394E000D22B6 /* Foundation.framework */; };
 		F0E2D00219BB394E000D22B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E2D00119BB394E000D22B6 /* CoreGraphics.framework */; };
 		F0E2D00419BB394E000D22B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E2D00319BB394E000D22B6 /* UIKit.framework */; };
@@ -97,6 +104,15 @@
 		F052CCCA19BF3D8300A82D01 /* OpenCity-Icon-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OpenCity-Icon-1024.png"; sourceTree = "<group>"; };
 		F052CCE119BF49F700A82D01 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		F052CCE219BF49F700A82D01 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		F052CCEF19BF53F800A82D01 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		F052CCF719C0365B00A82D01 /* tableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tableVC.h; sourceTree = "<group>"; };
+		F052CCF819C0365B00A82D01 /* tableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tableVC.m; sourceTree = "<group>"; };
+		F052CCFA19C03C8300A82D01 /* mainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainViewController.h; sourceTree = "<group>"; };
+		F052CCFB19C03C8300A82D01 /* mainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainViewController.m; sourceTree = "<group>"; };
+		F052CCFF19C049F800A82D01 /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon.png"; sourceTree = "<group>"; };
+		F052CD0119C04CC300A82D01 /* dashboard-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dashboard-icon.png"; sourceTree = "<group>"; };
+		F052CD0319C0517B00A82D01 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		F052CD0519C0523800A82D01 /* placeholder.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = placeholder.gif; sourceTree = "<group>"; };
 		F0E2CFFC19BB394E000D22B6 /* OpenCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E2CFFF19BB394E000D22B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F0E2D00119BB394E000D22B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -175,6 +191,9 @@
 		F052CC6E19BF2CC700A82D01 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				F052CCFF19C049F800A82D01 /* reveal-icon.png */,
+				F052CC7319BF396F00A82D01 /* OpenCity-Icon.png */,
+				F052CCEF19BF53F800A82D01 /* background.png */,
 				F052CC7519BF3C1200A82D01 /* icons */,
 				F052CC7119BF2D2C00A82D01 /* OpenCity-Logo.png */,
 			);
@@ -184,6 +203,7 @@
 		F052CC7519BF3C1200A82D01 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				F052CD0119C04CC300A82D01 /* dashboard-icon.png */,
 				F052CCB819BF3D8300A82D01 /* OpenCity-Icon-20.png */,
 				F052CCB919BF3D8300A82D01 /* OpenCity-Icon-29.png */,
 				F052CCBA19BF3D8300A82D01 /* OpenCity-Icon-30.png */,
@@ -203,8 +223,19 @@
 				F052CCC819BF3D8300A82D01 /* OpenCity-Icon-512.png */,
 				F052CCC919BF3D8300A82D01 /* OpenCity-Icon-640.png */,
 				F052CCCA19BF3D8300A82D01 /* OpenCity-Icon-1024.png */,
+				F052CD0519C0523800A82D01 /* placeholder.gif */,
+				F052CD0319C0517B00A82D01 /* map.png */,
 			);
 			name = icons;
+			sourceTree = "<group>";
+		};
+		F052CCE419BF4AA200A82D01 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				F052CCE119BF49F700A82D01 /* SWRevealViewController.h */,
+				F052CCE219BF49F700A82D01 /* SWRevealViewController.m */,
+			);
+			name = Library;
 			sourceTree = "<group>";
 		};
 		F0E2CFF319BB394E000D22B6 = {
@@ -257,16 +288,18 @@
 		F0E2D00519BB394E000D22B6 /* OpenCity */ = {
 			isa = PBXGroup;
 			children = (
+				F052CCE419BF4AA200A82D01 /* Library */,
 				F052CC6E19BF2CC700A82D01 /* assets */,
-				F052CCE119BF49F700A82D01 /* SWRevealViewController.h */,
-				F052CCE219BF49F700A82D01 /* SWRevealViewController.m */,
 				F0E2D00E19BB394E000D22B6 /* AppDelegate.h */,
 				F0E2D00F19BB394E000D22B6 /* AppDelegate.m */,
 				F0E2D01119BB394E000D22B6 /* Main.storyboard */,
+				F052CCFA19C03C8300A82D01 /* mainViewController.h */,
+				F052CCFB19C03C8300A82D01 /* mainViewController.m */,
+				F052CCF719C0365B00A82D01 /* tableVC.h */,
+				F052CCF819C0365B00A82D01 /* tableVC.m */,
 				F0E2D01419BB394E000D22B6 /* ViewController.h */,
 				F0E2D01519BB394E000D22B6 /* ViewController.m */,
 				F0E2D01719BB394E000D22B6 /* Images.xcassets */,
-				F052CC7319BF396F00A82D01 /* OpenCity-Icon.png */,
 				F0E2D00619BB394E000D22B6 /* Supporting Files */,
 			);
 			path = OpenCity;
@@ -386,13 +419,17 @@
 				F052CCDD19BF3D8300A82D01 /* OpenCity-Icon-1024.png in Resources */,
 				F052CCCF19BF3D8300A82D01 /* OpenCity-Icon-48.png in Resources */,
 				F052CCD819BF3D8300A82D01 /* OpenCity-Icon-114.png in Resources */,
+				F052CCF019BF53F800A82D01 /* background.png in Resources */,
 				F052CCD619BF3D8300A82D01 /* OpenCity-Icon-96.png in Resources */,
 				F052CCCE19BF3D8300A82D01 /* OpenCity-Icon-40.png in Resources */,
+				F052CD0619C0523800A82D01 /* placeholder.gif in Resources */,
 				F052CCDC19BF3D8300A82D01 /* OpenCity-Icon-640.png in Resources */,
+				F052CD0219C04CC300A82D01 /* dashboard-icon.png in Resources */,
 				F0E2D01819BB394E000D22B6 /* Images.xcassets in Resources */,
 				F052CCD519BF3D8300A82D01 /* OpenCity-Icon-72.png in Resources */,
 				F052CCDB19BF3D8300A82D01 /* OpenCity-Icon-512.png in Resources */,
 				F052CC7419BF396F00A82D01 /* OpenCity-Icon.png in Resources */,
+				F052CD0419C0517B00A82D01 /* map.png in Resources */,
 				F052CC7219BF2D2C00A82D01 /* OpenCity-Logo.png in Resources */,
 				F052CCD919BF3D8300A82D01 /* OpenCity-Icon-144.png in Resources */,
 				F052CCCD19BF3D8300A82D01 /* OpenCity-Icon-30.png in Resources */,
@@ -401,6 +438,7 @@
 				F052CCCB19BF3D8300A82D01 /* OpenCity-Icon-20.png in Resources */,
 				F0E2D01319BB394E000D22B6 /* Main.storyboard in Resources */,
 				F052CCD019BF3D8300A82D01 /* OpenCity-Icon-50.png in Resources */,
+				F052CD0019C049F800A82D01 /* reveal-icon.png in Resources */,
 				F052CCD219BF3D8300A82D01 /* OpenCity-Icon-58.png in Resources */,
 				F0F3A00619BE3CC400CCDCB8 /* GoogleMaps.bundle in Resources */,
 				F052CCD419BF3D8300A82D01 /* OpenCity-Icon-64.png in Resources */,
@@ -458,6 +496,8 @@
 				F0E2D01619BB394E000D22B6 /* ViewController.m in Sources */,
 				F0E2D01019BB394E000D22B6 /* AppDelegate.m in Sources */,
 				F0E2D00C19BB394E000D22B6 /* main.m in Sources */,
+				F052CCFC19C03C8300A82D01 /* mainViewController.m in Sources */,
+				F052CCF919C0365B00A82D01 /* tableVC.m in Sources */,
 				F052CCE319BF49F700A82D01 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

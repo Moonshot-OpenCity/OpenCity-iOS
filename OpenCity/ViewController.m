@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "MMDrawerController.h"
 
 @interface ViewController ()
 
@@ -18,9 +17,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    CAGradientLayer *bgLayer = [self blueGradient];
-    bgLayer.frame = self.view.bounds;
-    [self.view.layer insertSublayer:bgLayer atIndex:0];
+//    CAGradientLayer *bgLayer = [self blueGradient];
+//    bgLayer.frame = self.view.bounds;
+//    [self.view.layer insertSublayer:bgLayer atIndex:0];
+    
+//    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"backgroundf.jpg"]];
+//    self.view.backgroundColor = background;
+
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"background.png"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     CGRect endFrame = [[self view] frame];
     [self.logo setFrame: CGRectMake([[self view] frame].origin.x, [[self view] frame].origin.y + 480.0, [[self view] frame].size.width, [[self view] frame].size.height)];
     [UIView beginAnimations: nil context: NULL];
