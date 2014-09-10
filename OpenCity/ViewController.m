@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "SWRevealViewController.h"
 #import "mainViewController.h"
-#import "swVC.h"
 
 @interface ViewController ()
 

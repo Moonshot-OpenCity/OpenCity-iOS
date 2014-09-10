@@ -37,7 +37,8 @@
 		F052CD0219C04CC300A82D01 /* dashboard-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CD0119C04CC300A82D01 /* dashboard-icon.png */; };
 		F052CD0419C0517B00A82D01 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CD0319C0517B00A82D01 /* map.png */; };
 		F052CD0619C0523800A82D01 /* placeholder.gif in Resources */ = {isa = PBXBuildFile; fileRef = F052CD0519C0523800A82D01 /* placeholder.gif */; };
-		F052CD0919C06B3100A82D01 /* swVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F052CD0819C06B3100A82D01 /* swVC.m */; };
+		F052CD0C19C06F3E00A82D01 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F052CD0B19C06F3E00A82D01 /* loginViewController.m */; };
+		F052CD0E19C06F7800A82D01 /* backgroundLogin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F052CD0D19C06F7800A82D01 /* backgroundLogin.jpg */; };
 		F0E2D00019BB394E000D22B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E2CFFF19BB394E000D22B6 /* Foundation.framework */; };
 		F0E2D00219BB394E000D22B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E2D00119BB394E000D22B6 /* CoreGraphics.framework */; };
 		F0E2D00419BB394E000D22B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E2D00319BB394E000D22B6 /* UIKit.framework */; };
@@ -114,8 +115,9 @@
 		F052CD0119C04CC300A82D01 /* dashboard-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dashboard-icon.png"; sourceTree = "<group>"; };
 		F052CD0319C0517B00A82D01 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		F052CD0519C0523800A82D01 /* placeholder.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = placeholder.gif; sourceTree = "<group>"; };
-		F052CD0719C06B3100A82D01 /* swVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swVC.h; sourceTree = "<group>"; };
-		F052CD0819C06B3100A82D01 /* swVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = swVC.m; sourceTree = "<group>"; };
+		F052CD0A19C06F3E00A82D01 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
+		F052CD0B19C06F3E00A82D01 /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
+		F052CD0D19C06F7800A82D01 /* backgroundLogin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundLogin.jpg; sourceTree = "<group>"; };
 		F0E2CFFC19BB394E000D22B6 /* OpenCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E2CFFF19BB394E000D22B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F0E2D00119BB394E000D22B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -194,6 +196,7 @@
 		F052CC6E19BF2CC700A82D01 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				F052CD0D19C06F7800A82D01 /* backgroundLogin.jpg */,
 				F052CCFF19C049F800A82D01 /* reveal-icon.png */,
 				F052CC7319BF396F00A82D01 /* OpenCity-Icon.png */,
 				F052CCEF19BF53F800A82D01 /* background.png */,
@@ -291,11 +294,11 @@
 		F0E2D00519BB394E000D22B6 /* OpenCity */ = {
 			isa = PBXGroup;
 			children = (
+				F052CD0A19C06F3E00A82D01 /* loginViewController.h */,
+				F052CD0B19C06F3E00A82D01 /* loginViewController.m */,
 				F052CCE419BF4AA200A82D01 /* Library */,
 				F052CC6E19BF2CC700A82D01 /* assets */,
 				F0E2D00E19BB394E000D22B6 /* AppDelegate.h */,
-				F052CD0719C06B3100A82D01 /* swVC.h */,
-				F052CD0819C06B3100A82D01 /* swVC.m */,
 				F0E2D00F19BB394E000D22B6 /* AppDelegate.m */,
 				F0E2D01119BB394E000D22B6 /* Main.storyboard */,
 				F052CCFA19C03C8300A82D01 /* mainViewController.h */,
@@ -425,6 +428,7 @@
 				F052CCCF19BF3D8300A82D01 /* OpenCity-Icon-48.png in Resources */,
 				F052CCD819BF3D8300A82D01 /* OpenCity-Icon-114.png in Resources */,
 				F052CCF019BF53F800A82D01 /* background.png in Resources */,
+				F052CD0E19C06F7800A82D01 /* backgroundLogin.jpg in Resources */,
 				F052CCD619BF3D8300A82D01 /* OpenCity-Icon-96.png in Resources */,
 				F052CCCE19BF3D8300A82D01 /* OpenCity-Icon-40.png in Resources */,
 				F052CD0619C0523800A82D01 /* placeholder.gif in Resources */,
@@ -498,12 +502,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F052CD0C19C06F3E00A82D01 /* loginViewController.m in Sources */,
 				F0E2D01619BB394E000D22B6 /* ViewController.m in Sources */,
 				F0E2D01019BB394E000D22B6 /* AppDelegate.m in Sources */,
 				F0E2D00C19BB394E000D22B6 /* main.m in Sources */,
 				F052CCFC19C03C8300A82D01 /* mainViewController.m in Sources */,
 				F052CCF919C0365B00A82D01 /* tableVC.m in Sources */,
-				F052CD0919C06B3100A82D01 /* swVC.m in Sources */,
 				F052CCE319BF49F700A82D01 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,6 +645,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenCity/OpenCity-Prefix.pch";
 				INFOPLIST_FILE = "OpenCity/OpenCity-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -661,6 +666,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenCity/OpenCity-Prefix.pch";
 				INFOPLIST_FILE = "OpenCity/OpenCity-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

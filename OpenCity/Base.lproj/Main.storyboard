@@ -102,11 +102,11 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="connect" id="8Y6-ww-sIY">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="connect" id="8Y6-ww-sIY">
                                 <rect key="frame" x="0.0" y="154" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Y6-ww-sIY" id="6Nc-B1-ah7">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Se connecter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZn-RJ-U4b">
@@ -123,6 +123,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="5gu-Cy-8tO" kind="custom" identifier="showLogin" customClass="SWRevealViewControllerSegueSetController" id="3wX-hL-p9f"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -135,10 +138,11 @@
             </objects>
             <point key="canvasLocation" x="347" y="-401"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller - Title-->
         <scene sceneID="q02-5F-cXE">
             <objects>
-                <viewController id="5gu-Cy-8tO" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CWt-y4-82J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="connect" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5gu-Cy-8tO" customClass="loginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="H0S-yo-FQW"/>
                         <viewControllerLayoutGuide type="bottom" id="1ao-YP-2le"/>
@@ -148,8 +152,8 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="reI-eP-HYx"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CWt-y4-82J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="812" y="-401"/>
         </scene>

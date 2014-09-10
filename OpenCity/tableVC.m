@@ -7,6 +7,8 @@
 //
 
 #import "tableVC.h"
+#import "SWRevealViewController.h"
+#import "loginViewController.h"
 
 @interface tableVC ()
 
@@ -18,7 +20,6 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -32,13 +33,37 @@
     self.menuItems = @[@"title", @"dashboard", @"carte", @"connect"];
 }
 
+- (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    UINavigationController *destViewController = (UINavigationController*)segue.destinationViewController;
+    destViewController.title = [[_menuItems objectAtIndex:indexPath.row] capitalizedString];
+    
+    if ([segue isKindOfClass:[SWRevealViewControllerSegueSetController class]])
+         {
+//             SWRevealViewControllerSegueSetController *swSegue = (SWRevealViewControllerSegueSetController*) segue;
+             UINavigationController* navController = (UINavigationController*)self.revealViewController.frontViewController;
+             [navController setViewControllers: @[destViewController] animated: NO ];
+             [self.revealViewController setFrontViewPosition: FrontViewPositionLeft animated: YES];
+         }
+//    if ([segue isKindOfClass: [SWRevealViewControllerSegueSetController class]] ) {
+//        SWRevealViewControllerSegueSetController *swSegue = (SWRevealViewControllerSegue*) segue;
+//        
+//        swSegue.performBlock = ^(SWRevealViewControllerSegue* rvc_segue, UIViewController* svc, UIViewController* dvc) {
+//            
+//            UINavigationController* navController = (UINavigationController*)self.revealViewController.frontViewController;
+//            [navController setViewControllers: @[dvc] animated: NO ];
+//            [self.revealViewController setFrontViewPosition: FrontViewPositionLeft animated: YES];
+  //      };
+        
+//    }
+//    NSLog(@"%@", [self.menuItems objectAtIndex:indexPath.row]);
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -47,7 +72,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
     return [self.menuItems count];
 }
 
@@ -58,4 +82,5 @@
     
     return cell;
 }
+
 @end
