@@ -37,6 +37,7 @@
 		F052CD0219C04CC300A82D01 /* dashboard-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CD0119C04CC300A82D01 /* dashboard-icon.png */; };
 		F052CD0419C0517B00A82D01 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CD0319C0517B00A82D01 /* map.png */; };
 		F052CD0619C0523800A82D01 /* placeholder.gif in Resources */ = {isa = PBXBuildFile; fileRef = F052CD0519C0523800A82D01 /* placeholder.gif */; };
+		F052CD0919C06B3100A82D01 /* swVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F052CD0819C06B3100A82D01 /* swVC.m */; };
 		F0E2D00019BB394E000D22B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E2CFFF19BB394E000D22B6 /* Foundation.framework */; };
 		F0E2D00219BB394E000D22B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E2D00119BB394E000D22B6 /* CoreGraphics.framework */; };
 		F0E2D00419BB394E000D22B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E2D00319BB394E000D22B6 /* UIKit.framework */; };
@@ -113,6 +114,8 @@
 		F052CD0119C04CC300A82D01 /* dashboard-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dashboard-icon.png"; sourceTree = "<group>"; };
 		F052CD0319C0517B00A82D01 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		F052CD0519C0523800A82D01 /* placeholder.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = placeholder.gif; sourceTree = "<group>"; };
+		F052CD0719C06B3100A82D01 /* swVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swVC.h; sourceTree = "<group>"; };
+		F052CD0819C06B3100A82D01 /* swVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = swVC.m; sourceTree = "<group>"; };
 		F0E2CFFC19BB394E000D22B6 /* OpenCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E2CFFF19BB394E000D22B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F0E2D00119BB394E000D22B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -291,6 +294,8 @@
 				F052CCE419BF4AA200A82D01 /* Library */,
 				F052CC6E19BF2CC700A82D01 /* assets */,
 				F0E2D00E19BB394E000D22B6 /* AppDelegate.h */,
+				F052CD0719C06B3100A82D01 /* swVC.h */,
+				F052CD0819C06B3100A82D01 /* swVC.m */,
 				F0E2D00F19BB394E000D22B6 /* AppDelegate.m */,
 				F0E2D01119BB394E000D22B6 /* Main.storyboard */,
 				F052CCFA19C03C8300A82D01 /* mainViewController.h */,
@@ -498,6 +503,7 @@
 				F0E2D00C19BB394E000D22B6 /* main.m in Sources */,
 				F052CCFC19C03C8300A82D01 /* mainViewController.m in Sources */,
 				F052CCF919C0365B00A82D01 /* tableVC.m in Sources */,
+				F052CD0919C06B3100A82D01 /* swVC.m in Sources */,
 				F052CCE319BF49F700A82D01 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
