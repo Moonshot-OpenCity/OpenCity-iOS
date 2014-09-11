@@ -46,6 +46,7 @@
         obj.currentLocation = currentLocation;
         [self.mapview changeCamera];
     }
+    [locationManager stopUpdatingLocation];
 }
 
 -(void)startTracking

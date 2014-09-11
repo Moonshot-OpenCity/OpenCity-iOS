@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSMutableSet *markers;
 @property (strong, nonatomic) GMSMapView *mapView_;
 @property (strong, nonatomic) locationVC *locationManager;
+@property (strong, nonatomic) GMSMarker  *marker;
 
 @end
 
@@ -26,6 +27,37 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {}
     return self;
+}
+
+-(void)addMarker
+{
+    self.marker.map = nil;
+    self.marker = [GMSMarker markerWithPosition:self.camera.target];
+    self.marker.title = @"Ajouter un post-it";
+    self.marker.map = self.mapView_;
+}
+
+-(void)mapView:(GMSMapView *)mapView didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate
+{
+    self.marker.map = nil;
+    self.marker = [GMSMarker markerWithPosition:coordinate];
+    self.marker.title = @"Ajouter un post-it";
+    self.marker.map = self.mapView_;
+}
+
+- (void) mapView:(GMSMapView *)mapView didTapInfoWindowOfMarker:(GMSMarker *)marker
+{
+    
+}
+
+- (void) mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate
+{
+}
+
+- (void) mapView:(GMSMapView *)mapView didChangeCameraPosition:(GMSCameraPosition *)position
+{
+    self.camera = position;
+    self.marker.position = position.target;
 }
 
 -(void)changeCamera
@@ -54,6 +86,7 @@
 - (BOOL) didTapMyLocationButtonForMapView:(GMSMapView *)mapView
 {
     [self.locationManager startTracking];
+    NSLog(@"test");
     return YES;
 }
 

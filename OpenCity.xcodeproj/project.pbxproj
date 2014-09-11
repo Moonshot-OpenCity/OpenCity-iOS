@@ -75,6 +75,7 @@
 		F0EE016019C1B40C00C4EE2D /* dataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE015F19C1B40C00C4EE2D /* dataClass.m */; };
 		F0EE016919C1C0D800C4EE2D /* locationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE016819C1C0D800C4EE2D /* locationVC.m */; };
 		F0EE016D19C1CBF700C4EE2D /* lyon-partdieu.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F0EE016C19C1CBF700C4EE2D /* lyon-partdieu.gpx */; };
+		F0EE016F19C1DC2C00C4EE2D /* login-bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0EE016E19C1DC2C00C4EE2D /* login-bg.jpg */; };
 		F0F3A00219BE3B6400CCDCB8 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F3A00119BE3B6400CCDCB8 /* GoogleMaps.framework */; };
 		F0F3A00619BE3CC400CCDCB8 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F0F3A00519BE3CC400CCDCB8 /* GoogleMaps.bundle */; };
 		F0F3A00819BE3CFB00CCDCB8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F3A00719BE3CFB00CCDCB8 /* AVFoundation.framework */; };
@@ -203,6 +204,7 @@
 		F0EE016719C1C0D800C4EE2D /* locationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = locationVC.h; sourceTree = "<group>"; };
 		F0EE016819C1C0D800C4EE2D /* locationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = locationVC.m; sourceTree = "<group>"; };
 		F0EE016C19C1CBF700C4EE2D /* lyon-partdieu.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "lyon-partdieu.gpx"; sourceTree = "<group>"; };
+		F0EE016E19C1DC2C00C4EE2D /* login-bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "login-bg.jpg"; sourceTree = "<group>"; };
 		F0F3A00119BE3B6400CCDCB8 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		F0F3A00519BE3CC400CCDCB8 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		F0F3A00719BE3CFB00CCDCB8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -262,6 +264,7 @@
 		F052CC6E19BF2CC700A82D01 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				F0EE016E19C1DC2C00C4EE2D /* login-bg.jpg */,
 				F0EE015719C19B3A00C4EE2D /* city-night.png */,
 				F052CD0D19C06F7800A82D01 /* backgroundLogin.jpg */,
 				F052CCFF19C049F800A82D01 /* reveal-icon.png */,
@@ -544,6 +547,7 @@
 				F052CCDA19BF3D8300A82D01 /* OpenCity-Icon-320.png in Resources */,
 				F052CCDD19BF3D8300A82D01 /* OpenCity-Icon-1024.png in Resources */,
 				F052CCCF19BF3D8300A82D01 /* OpenCity-Icon-48.png in Resources */,
+				F0EE016F19C1DC2C00C4EE2D /* login-bg.jpg in Resources */,
 				F052CCD819BF3D8300A82D01 /* OpenCity-Icon-114.png in Resources */,
 				F0EE015819C19B3A00C4EE2D /* city-night.png in Resources */,
 				F052CCF019BF53F800A82D01 /* background.png in Resources */,

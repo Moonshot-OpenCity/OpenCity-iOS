@@ -36,7 +36,7 @@
 {
     [super viewDidLoad];
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"city-night.png"] drawInRect:self.view.bounds];
+    [[UIImage imageNamed:@"login-bg.jpg"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];

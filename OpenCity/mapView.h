@@ -12,5 +12,6 @@
 @interface mapView : UIViewController
 
 -(void)changeCamera;
+-(void)addMarker;
 
 @end

@@ -9,6 +9,7 @@
 #import "tableVC.h"
 #import "SWRevealViewController.h"
 #import "loginViewController.h"
+#import "mapView.h"
 
 @interface tableVC ()
 
@@ -41,8 +42,14 @@
     destViewController.title = [[_menuItems objectAtIndex:indexPath.row] capitalizedString];
     destViewController.navigationItem.hidesBackButton = false;
     UIBarButtonItem *_customBackButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"] style:UIBarButtonItemStyleDone target:nil action:nil];
+//    if ([destViewController isKindOfClass:[mapView class]])
+//    {
+//        UIBarButtonItem *_addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:nil action:nil];
+//        //[_addButton setTarget:<#(id)#>
+//    }
     SWRevealViewController *revealViewController = self.revealViewController;
-    if (revealViewController){
+    if (revealViewController)
+    {
         [_customBackButton setTarget: self.revealViewController];
         [_customBackButton setAction: @selector(revealToggle:)];
         [destViewController.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
