@@ -12,6 +12,8 @@
 
 @interface tableVC ()
 
+@property (strong, nonatomic) NSString *token;
+
 @end
 
 @implementation tableVC
@@ -33,31 +35,31 @@
     self.menuItems = @[@"title", @"dashboard", @"carte", @"connect"];
 }
 
+-(void)userLogged:(NSString*)token
+{
+    
+}
+
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
 {
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     UINavigationController *destViewController = (UINavigationController*)segue.destinationViewController;
     destViewController.title = [[_menuItems objectAtIndex:indexPath.row] capitalizedString];
-    
+    destViewController.navigationItem.hidesBackButton = false;
+    UIBarButtonItem *_customBackButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"] style:UIBarButtonItemStyleDone target:nil action:nil];
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if (revealViewController){
+        [_customBackButton setTarget: self.revealViewController];
+        [_customBackButton setAction: @selector(revealToggle:)];
+        [destViewController.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
+        destViewController.navigationItem.leftBarButtonItem = _customBackButton;
+    }
     if ([segue isKindOfClass:[SWRevealViewControllerSegueSetController class]])
          {
-//             SWRevealViewControllerSegueSetController *swSegue = (SWRevealViewControllerSegueSetController*) segue;
              UINavigationController* navController = (UINavigationController*)self.revealViewController.frontViewController;
              [navController setViewControllers: @[destViewController] animated: NO ];
              [self.revealViewController setFrontViewPosition: FrontViewPositionLeft animated: YES];
          }
-//    if ([segue isKindOfClass: [SWRevealViewControllerSegueSetController class]] ) {
-//        SWRevealViewControllerSegueSetController *swSegue = (SWRevealViewControllerSegue*) segue;
-//        
-//        swSegue.performBlock = ^(SWRevealViewControllerSegue* rvc_segue, UIViewController* svc, UIViewController* dvc) {
-//            
-//            UINavigationController* navController = (UINavigationController*)self.revealViewController.frontViewController;
-//            [navController setViewControllers: @[dvc] animated: NO ];
-//            [self.revealViewController setFrontViewPosition: FrontViewPositionLeft animated: YES];
-  //      };
-        
-//    }
-//    NSLog(@"%@", [self.menuItems objectAtIndex:indexPath.row]);
 }
 
 - (void)didReceiveMemoryWarning
