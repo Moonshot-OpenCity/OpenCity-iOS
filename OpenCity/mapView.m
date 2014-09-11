@@ -9,6 +9,11 @@
 #import "mapView.h"
 #import "locationVC.h"
 #import "dataClass.h"
+#import "addPostit.h"
+#import "AFHTTPRequestOperation.h"
+#import "AFHTTPRequestOperationManager.h"
+#import "AFNetworking.h"
+#import "AFHTTPSessionManager.h"
 
 @interface mapView () <GMSMapViewDelegate>
 
@@ -47,11 +52,32 @@
 
 - (void) mapView:(GMSMapView *)mapView didTapInfoWindowOfMarker:(GMSMarker *)marker
 {
-    
+    dataClass *obj = [dataClass getInstance];
+    if (obj.isConnected == TRUE)
+    {
+        GMSGeocoder *geocoder = [GMSGeocoder geocoder];
+        [geocoder reverseGeocodeCoordinate:marker.position completionHandler:^(GMSReverseGeocodeResponse *response, NSError *error)
+         {
+             addPostit *addpostit = [[addPostit alloc] initWithNibName:@"addPostit" bundle:nil];
+             [addpostit setResponseData:response];
+             [self.navigationController pushViewController:addpostit animated:YES];
+         }];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Echec!"
+                                                        message:@"Connectez vous pour ajouter un post-it!"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+
+    }
 }
 
 - (void) mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate
 {
+    
 }
 
 - (void) mapView:(GMSMapView *)mapView didChangeCameraPosition:(GMSCameraPosition *)position
@@ -63,8 +89,60 @@
 -(void)changeCamera
 {
     dataClass *obj = [dataClass getInstance];
-    GMSCameraPosition *newPosition = [GMSCameraPosition cameraWithLatitude:obj.currentLocation.coordinate.latitude longitude:obj.currentLocation.coordinate.longitude zoom:15];
+    GMSCameraPosition *newPosition = [GMSCameraPosition cameraWithLatitude:obj.currentLocation.coordinate.latitude longitude:obj.currentLocation.coordinate.longitude zoom:14];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:@"http://opencity-moonshot.herokuapp.com/api/postits/searchByLocation?"
+       parameters:@{@"lat": [NSString stringWithFormat:@"%f", obj.currentLocation.coordinate.latitude],
+                    @"lon": [NSString stringWithFormat:@"%f", obj.currentLocation.coordinate.longitude]}
+          success:^(AFHTTPRequestOperation *operation, id responseObject) {
+              self.postItList = responseObject;
+              [self showPlaces];
+              [self drawMarkers];
+          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+              UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Echec de l'opération"
+                                                              message:error.localizedDescription
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles:nil];
+              [alert show];
+          }];
+
     [self.mapView_ setCamera:newPosition];
+}
+
+- (void)showPlaces
+{
+    for (id key in self.postItList)
+    {
+        [self placeMarker:key[@"title"] details:key[@"description"] lat:key[@"location"][0] lon:key[@"location"][1] type:key[@"type"]];
+    }
+}
+
+- (void)placeMarker:(NSString *)title details:(NSString *)details lat:(NSString *)lat lon:(NSString *)lon type:(NSString *)type
+{
+    GMSMarker *marker = [[GMSMarker alloc] init];
+    
+    marker.position = CLLocationCoordinate2DMake([lat doubleValue], [lon doubleValue]);
+    marker.title = title;
+    marker.snippet = details;
+    marker.appearAnimation = kGMSMarkerAnimationPop;
+    if ([type isEqualToString:@"positive"])
+        marker.icon = [GMSMarker markerImageWithColor:[UIColor greenColor]];
+    else
+        marker.icon = [GMSMarker markerImageWithColor:[UIColor redColor]];
+    marker.map = nil;
+    [self.markers addObject:marker];
+}
+
+- (void)drawMarkers
+{
+    for (GMSMarker *marker in self.markers)
+    {
+        if (marker.map == nil)
+        {
+            marker.map = self.mapView_;
+        }
+    }
 }
 
 - (void)viewDidLoad
@@ -72,6 +150,7 @@
     [super viewDidLoad];
     self.locationManager = [[locationVC alloc] init];
     [self.locationManager startManager:self];
+    self.markers = [[NSMutableSet alloc] init];
     self.camera = [GMSCameraPosition cameraWithLatitude:45.755038
                                               longitude:4.85
                                                    zoom:15];
@@ -86,7 +165,6 @@
 - (BOOL) didTapMyLocationButtonForMapView:(GMSMapView *)mapView
 {
     [self.locationManager startTracking];
-    NSLog(@"test");
     return YES;
 }
 

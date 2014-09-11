@@ -42,11 +42,7 @@
     destViewController.title = [[_menuItems objectAtIndex:indexPath.row] capitalizedString];
     destViewController.navigationItem.hidesBackButton = false;
     UIBarButtonItem *_customBackButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"] style:UIBarButtonItemStyleDone target:nil action:nil];
-//    if ([destViewController isKindOfClass:[mapView class]])
-//    {
-//        UIBarButtonItem *_addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:nil action:nil];
-//        //[_addButton setTarget:<#(id)#>
-//    }
+    
     SWRevealViewController *revealViewController = self.revealViewController;
     if (revealViewController)
     {

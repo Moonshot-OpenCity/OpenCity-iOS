@@ -76,6 +76,7 @@
 		F0EE016919C1C0D800C4EE2D /* locationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE016819C1C0D800C4EE2D /* locationVC.m */; };
 		F0EE016D19C1CBF700C4EE2D /* lyon-partdieu.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F0EE016C19C1CBF700C4EE2D /* lyon-partdieu.gpx */; };
 		F0EE016F19C1DC2C00C4EE2D /* login-bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0EE016E19C1DC2C00C4EE2D /* login-bg.jpg */; };
+		F0EE017219C1E04000C4EE2D /* addPostit.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE017119C1E04000C4EE2D /* addPostit.m */; };
 		F0F3A00219BE3B6400CCDCB8 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F3A00119BE3B6400CCDCB8 /* GoogleMaps.framework */; };
 		F0F3A00619BE3CC400CCDCB8 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F0F3A00519BE3CC400CCDCB8 /* GoogleMaps.bundle */; };
 		F0F3A00819BE3CFB00CCDCB8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F3A00719BE3CFB00CCDCB8 /* AVFoundation.framework */; };
@@ -205,6 +206,8 @@
 		F0EE016819C1C0D800C4EE2D /* locationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = locationVC.m; sourceTree = "<group>"; };
 		F0EE016C19C1CBF700C4EE2D /* lyon-partdieu.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "lyon-partdieu.gpx"; sourceTree = "<group>"; };
 		F0EE016E19C1DC2C00C4EE2D /* login-bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "login-bg.jpg"; sourceTree = "<group>"; };
+		F0EE017019C1E04000C4EE2D /* addPostit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addPostit.h; sourceTree = "<group>"; };
+		F0EE017119C1E04000C4EE2D /* addPostit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addPostit.m; sourceTree = "<group>"; };
 		F0F3A00119BE3B6400CCDCB8 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		F0F3A00519BE3CC400CCDCB8 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		F0F3A00719BE3CFB00CCDCB8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -365,18 +368,20 @@
 			isa = PBXGroup;
 			children = (
 				F0EE016C19C1CBF700C4EE2D /* lyon-partdieu.gpx */,
+				F0EE011F19C191FE00C4EE2D /* AFNetworking */,
+				F052CCE419BF4AA200A82D01 /* Library */,
+				F052CC6E19BF2CC700A82D01 /* assets */,
+				F0E2D00E19BB394E000D22B6 /* AppDelegate.h */,
+				F0E2D00F19BB394E000D22B6 /* AppDelegate.m */,
 				F0EE016719C1C0D800C4EE2D /* locationVC.h */,
 				F0EE016819C1C0D800C4EE2D /* locationVC.m */,
 				F052CD0A19C06F3E00A82D01 /* loginViewController.h */,
 				F052CD0B19C06F3E00A82D01 /* loginViewController.m */,
 				F0EE015E19C1B40C00C4EE2D /* dataClass.h */,
 				F0EE015F19C1B40C00C4EE2D /* dataClass.m */,
-				F0EE011F19C191FE00C4EE2D /* AFNetworking */,
-				F052CCE419BF4AA200A82D01 /* Library */,
-				F052CC6E19BF2CC700A82D01 /* assets */,
-				F0E2D00E19BB394E000D22B6 /* AppDelegate.h */,
-				F0E2D00F19BB394E000D22B6 /* AppDelegate.m */,
 				F0E2D01119BB394E000D22B6 /* Main.storyboard */,
+				F0EE017019C1E04000C4EE2D /* addPostit.h */,
+				F0EE017119C1E04000C4EE2D /* addPostit.m */,
 				F0EE015919C19BE500C4EE2D /* mapView.h */,
 				F0EE015A19C19BE500C4EE2D /* mapView.m */,
 				F052CCFA19C03C8300A82D01 /* mainViewController.h */,
@@ -636,6 +641,7 @@
 				F0EE014C19C1921600C4EE2D /* AFHTTPRequestOperation.m in Sources */,
 				F0EE015219C1921600C4EE2D /* AFURLRequestSerialization.m in Sources */,
 				F0EE015119C1921600C4EE2D /* AFURLConnectionOperation.m in Sources */,
+				F0EE017219C1E04000C4EE2D /* addPostit.m in Sources */,
 				F0EE015419C1921600C4EE2D /* AFURLSessionManager.m in Sources */,
 				F0E2D00C19BB394E000D22B6 /* main.m in Sources */,
 				F0EE013319C1920D00C4EE2D /* UIAlertView+AFNetworking.m in Sources */,

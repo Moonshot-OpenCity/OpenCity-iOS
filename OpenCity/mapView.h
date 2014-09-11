@@ -11,6 +11,8 @@
 
 @interface mapView : UIViewController
 
+@property (strong, nonatomic) NSMutableDictionary *postItList;
+
 -(void)changeCamera;
 -(void)addMarker;
 

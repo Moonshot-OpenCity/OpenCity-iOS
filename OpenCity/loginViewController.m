@@ -40,6 +40,9 @@
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    //remove
+    self.loginField.text = @"antoninribeaud@gmail.com";
+    self.passField.text = @"test";
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,6 +61,7 @@
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               dataClass *obj = [dataClass getInstance];
               obj.token = responseObject[@"token"];
+              obj.isConnected = true;
               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connexion réussie"
                         message:@"vous êtes connecté!"
                         delegate:nil
@@ -86,6 +90,7 @@
     {
         dataClass *obj = [dataClass getInstance];
         obj.token = responseObject[@"token"];
+        obj.isConnected = true;
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Création réussie!"
                                                         message:@"vous êtes connecté!"
                                                        delegate:nil

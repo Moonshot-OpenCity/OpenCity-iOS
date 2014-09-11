@@ -41,6 +41,7 @@
     [UIView commitAnimations];
     NSTimer *aTimer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(aTime) userInfo:nil repeats:NO];
     aTimer = aTimer;
+    
 }
 
 -(void)aTime
