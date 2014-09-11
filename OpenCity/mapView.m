@@ -7,13 +7,15 @@
 //
 
 #import "mapView.h"
+#import "locationVC.h"
+#import "dataClass.h"
 
 @interface mapView () <GMSMapViewDelegate>
 
 @property (strong, nonatomic) GMSCameraPosition *camera;
 @property (strong, nonatomic) NSMutableSet *markers;
 @property (strong, nonatomic) GMSMapView *mapView_;
-
+@property (strong, nonatomic) locationVC *locationManager;
 
 @end
 
@@ -26,10 +28,18 @@
     return self;
 }
 
+-(void)changeCamera
+{
+    dataClass *obj = [dataClass getInstance];
+    GMSCameraPosition *newPosition = [GMSCameraPosition cameraWithLatitude:obj.currentLocation.coordinate.latitude longitude:obj.currentLocation.coordinate.longitude zoom:15];
+    [self.mapView_ setCamera:newPosition];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [super viewDidLoad];
+    self.locationManager = [[locationVC alloc] init];
+    [self.locationManager startManager:self];
     self.camera = [GMSCameraPosition cameraWithLatitude:45.755038
                                               longitude:4.85
                                                    zoom:15];
@@ -41,21 +51,15 @@
     self.mapView_.settings.myLocationButton = YES;
 }
 
+- (BOOL) didTapMyLocationButtonForMapView:(GMSMapView *)mapView
+{
+    [self.locationManager startTracking];
+    return YES;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

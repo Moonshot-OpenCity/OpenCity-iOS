@@ -45,10 +45,6 @@
 
 -(void)aTime
 {
-//    SWRevealViewController *revealViewController = [SWRevealViewController init];
-//    [self presentViewController:revealViewController animated:YES completion:nil];
-//    swVC *revealVC = [[swVC alloc] init];
-//    [self presentViewController:revealVC animated:YES completion:nil];
     SWRevealViewController *revealVC = [[self storyboard] instantiateViewControllerWithIdentifier:@"revealViewController"];
     [self presentViewController:revealVC animated:YES completion:nil];
 }

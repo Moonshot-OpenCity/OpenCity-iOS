@@ -11,6 +11,7 @@
 #import "AFHTTPRequestOperationManager.h"
 #import "AFNetworking.h"
 #import "AFHTTPSessionManager.h"
+#import "dataClass.h"
 
 @interface loginViewController ()
 
@@ -18,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *passField;
 @property (strong, nonatomic) NSString *login;
 @property (strong, nonatomic) NSString *password;
+@property (strong, nonatomic) NSString *token;
 
 @end
 
@@ -54,7 +56,15 @@
        parameters:@{@"email": self.login,
                     @"password": self.password}
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
-              NSLog(@"JSON: %@", responseObject);
+              dataClass *obj = [dataClass getInstance];
+              obj.token = responseObject[@"token"];
+              UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connexion réussie"
+                        message:@"vous êtes connecté!"
+                        delegate:nil
+                cancelButtonTitle:@"OK"
+            otherButtonTitles:nil];
+              [alert show];
+              NSLog(@"%@", responseObject[@"token"]);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Echec de l'opération"
                                                         message:error.localizedDescription
@@ -74,12 +84,15 @@
                     @"password": self.password}
           success:^(AFHTTPRequestOperation *operation, id responseObject)
     {
+        dataClass *obj = [dataClass getInstance];
+        obj.token = responseObject[@"token"];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Création réussie!"
                                                         message:@"vous êtes connecté!"
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert show];
+        
           } failure:^(AFHTTPRequestOperation *operation, NSError *error)
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Echec de l'opération"

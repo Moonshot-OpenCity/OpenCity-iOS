@@ -21,8 +21,7 @@
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
-    if (self) {
-    }
+    if (self) {}
     return self;
 }
 
@@ -33,11 +32,6 @@
     self.tableView.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
     self.tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:0.2f];
     self.menuItems = @[@"title", @"dashboard", @"carte", @"connect"];
-}
-
--(void)userLogged:(NSString*)token
-{
-    
 }
 
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender

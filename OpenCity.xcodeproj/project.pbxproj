@@ -72,6 +72,9 @@
 		F0EE015419C1921600C4EE2D /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE014B19C1921600C4EE2D /* AFURLSessionManager.m */; };
 		F0EE015819C19B3A00C4EE2D /* city-night.png in Resources */ = {isa = PBXBuildFile; fileRef = F0EE015719C19B3A00C4EE2D /* city-night.png */; };
 		F0EE015B19C19BE500C4EE2D /* mapView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE015A19C19BE500C4EE2D /* mapView.m */; };
+		F0EE016019C1B40C00C4EE2D /* dataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE015F19C1B40C00C4EE2D /* dataClass.m */; };
+		F0EE016919C1C0D800C4EE2D /* locationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE016819C1C0D800C4EE2D /* locationVC.m */; };
+		F0EE016D19C1CBF700C4EE2D /* lyon-partdieu.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F0EE016C19C1CBF700C4EE2D /* lyon-partdieu.gpx */; };
 		F0F3A00219BE3B6400CCDCB8 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F3A00119BE3B6400CCDCB8 /* GoogleMaps.framework */; };
 		F0F3A00619BE3CC400CCDCB8 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F0F3A00519BE3CC400CCDCB8 /* GoogleMaps.bundle */; };
 		F0F3A00819BE3CFB00CCDCB8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F3A00719BE3CFB00CCDCB8 /* AVFoundation.framework */; };
@@ -195,6 +198,11 @@
 		F0EE015719C19B3A00C4EE2D /* city-night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "city-night.png"; path = "../../../Desktop/city-night.png"; sourceTree = "<group>"; };
 		F0EE015919C19BE500C4EE2D /* mapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mapView.h; sourceTree = "<group>"; };
 		F0EE015A19C19BE500C4EE2D /* mapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mapView.m; sourceTree = "<group>"; };
+		F0EE015E19C1B40C00C4EE2D /* dataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dataClass.h; sourceTree = "<group>"; };
+		F0EE015F19C1B40C00C4EE2D /* dataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dataClass.m; sourceTree = "<group>"; };
+		F0EE016719C1C0D800C4EE2D /* locationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = locationVC.h; sourceTree = "<group>"; };
+		F0EE016819C1C0D800C4EE2D /* locationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = locationVC.m; sourceTree = "<group>"; };
+		F0EE016C19C1CBF700C4EE2D /* lyon-partdieu.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "lyon-partdieu.gpx"; sourceTree = "<group>"; };
 		F0F3A00119BE3B6400CCDCB8 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		F0F3A00519BE3CC400CCDCB8 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		F0F3A00719BE3CFB00CCDCB8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -217,6 +225,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F3A00C19BE3D0B00CCDCB8 /* CoreLocation.framework in Frameworks */,
 				F0F3A01E19BE3D4B00CCDCB8 /* SystemConfiguration.framework in Frameworks */,
 				F0F3A01C19BE3D4300CCDCB8 /* QuartzCore.framework in Frameworks */,
 				F0F3A01A19BE3D3E00CCDCB8 /* OpenGLES.framework in Frameworks */,
@@ -227,7 +236,6 @@
 				F0F3A01019BE3D1500CCDCB8 /* GLKit.framework in Frameworks */,
 				F0F3A02019BE442800CCDCB8 /* FacebookSDK.framework in Frameworks */,
 				F0F3A00E19BE3D1000CCDCB8 /* CoreText.framework in Frameworks */,
-				F0F3A00C19BE3D0B00CCDCB8 /* CoreLocation.framework in Frameworks */,
 				F0F3A00A19BE3D0300CCDCB8 /* CoreData.framework in Frameworks */,
 				F0F3A00819BE3CFB00CCDCB8 /* AVFoundation.framework in Frameworks */,
 				F0E2D00219BB394E000D22B6 /* CoreGraphics.framework in Frameworks */,
@@ -353,9 +361,14 @@
 		F0E2D00519BB394E000D22B6 /* OpenCity */ = {
 			isa = PBXGroup;
 			children = (
-				F0EE011F19C191FE00C4EE2D /* AFNetworking */,
+				F0EE016C19C1CBF700C4EE2D /* lyon-partdieu.gpx */,
+				F0EE016719C1C0D800C4EE2D /* locationVC.h */,
+				F0EE016819C1C0D800C4EE2D /* locationVC.m */,
 				F052CD0A19C06F3E00A82D01 /* loginViewController.h */,
 				F052CD0B19C06F3E00A82D01 /* loginViewController.m */,
+				F0EE015E19C1B40C00C4EE2D /* dataClass.h */,
+				F0EE015F19C1B40C00C4EE2D /* dataClass.m */,
+				F0EE011F19C191FE00C4EE2D /* AFNetworking */,
 				F052CCE419BF4AA200A82D01 /* Library */,
 				F052CC6E19BF2CC700A82D01 /* assets */,
 				F0E2D00E19BB394E000D22B6 /* AppDelegate.h */,
@@ -536,6 +549,7 @@
 				F052CCF019BF53F800A82D01 /* background.png in Resources */,
 				F052CD0E19C06F7800A82D01 /* backgroundLogin.jpg in Resources */,
 				F052CCD619BF3D8300A82D01 /* OpenCity-Icon-96.png in Resources */,
+				F0EE016D19C1CBF700C4EE2D /* lyon-partdieu.gpx in Resources */,
 				F052CCCE19BF3D8300A82D01 /* OpenCity-Icon-40.png in Resources */,
 				F052CD0619C0523800A82D01 /* placeholder.gif in Resources */,
 				F052CCDC19BF3D8300A82D01 /* OpenCity-Icon-640.png in Resources */,
@@ -610,6 +624,7 @@
 			files = (
 				F052CD0C19C06F3E00A82D01 /* loginViewController.m in Sources */,
 				F0E2D01619BB394E000D22B6 /* ViewController.m in Sources */,
+				F0EE016019C1B40C00C4EE2D /* dataClass.m in Sources */,
 				F0EE013819C1920D00C4EE2D /* UIWebView+AFNetworking.m in Sources */,
 				F0EE014E19C1921600C4EE2D /* AFHTTPSessionManager.m in Sources */,
 				F0E2D01019BB394E000D22B6 /* AppDelegate.m in Sources */,
@@ -632,6 +647,7 @@
 				F0EE014D19C1921600C4EE2D /* AFHTTPRequestOperationManager.m in Sources */,
 				F0EE015B19C19BE500C4EE2D /* mapView.m in Sources */,
 				F0EE013619C1920D00C4EE2D /* UIProgressView+AFNetworking.m in Sources */,
+				F0EE016919C1C0D800C4EE2D /* locationVC.m in Sources */,
 				F0EE015319C1921600C4EE2D /* AFURLResponseSerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

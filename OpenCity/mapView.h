@@ -11,4 +11,6 @@
 
 @interface mapView : UIViewController
 
+-(void)changeCamera;
+
 @end
