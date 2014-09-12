@@ -17,6 +17,4 @@
 @property (strong, nonatomic) NSString *lat;
 @property (strong, nonatomic) GMSMarker *marker;
 
--(void)setCoordinates:(NSInteger*)lat lon:(NSInteger*)lon;
-
 @end

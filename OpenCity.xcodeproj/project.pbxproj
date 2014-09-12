@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		58C0137E31524C34B9DDFC64 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 310D2245648B4ECC8FF0E53F /* libPods.a */; };
+		F021E4F419C336A200C6765F /* createAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = F021E4F319C336A200C6765F /* createAccount.xib */; };
+		F021E4F719C3381800C6765F /* createAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = F021E4F619C3381800C6765F /* createAccount.m */; };
 		F052CC7219BF2D2C00A82D01 /* OpenCity-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CC7119BF2D2C00A82D01 /* OpenCity-Logo.png */; };
 		F052CC7419BF396F00A82D01 /* OpenCity-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CC7319BF396F00A82D01 /* OpenCity-Icon.png */; };
 		F052CCCB19BF3D8300A82D01 /* OpenCity-Icon-20.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CCB819BF3D8300A82D01 /* OpenCity-Icon-20.png */; };
@@ -109,6 +111,9 @@
 /* Begin PBXFileReference section */
 		310D2245648B4ECC8FF0E53F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BE1CE8E80F249D68C930DCA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		F021E4F319C336A200C6765F /* createAccount.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = createAccount.xib; sourceTree = "<group>"; };
+		F021E4F519C3381800C6765F /* createAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = createAccount.h; sourceTree = "<group>"; };
+		F021E4F619C3381800C6765F /* createAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = createAccount.m; sourceTree = "<group>"; };
 		F052CC7119BF2D2C00A82D01 /* OpenCity-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OpenCity-Logo.png"; sourceTree = "<group>"; };
 		F052CC7319BF396F00A82D01 /* OpenCity-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OpenCity-Icon.png"; sourceTree = "<group>"; };
 		F052CCB819BF3D8300A82D01 /* OpenCity-Icon-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OpenCity-Icon-20.png"; sourceTree = "<group>"; };
@@ -384,6 +389,9 @@
 				F052CD0B19C06F3E00A82D01 /* loginViewController.m */,
 				F0EE015E19C1B40C00C4EE2D /* dataClass.h */,
 				F0EE015F19C1B40C00C4EE2D /* dataClass.m */,
+				F021E4F319C336A200C6765F /* createAccount.xib */,
+				F021E4F519C3381800C6765F /* createAccount.h */,
+				F021E4F619C3381800C6765F /* createAccount.m */,
 				F0551FDB19C2E9FF001F817D /* addPostitCView.xib */,
 				F0551FDD19C2EB4D001F817D /* addPostitCVxib.h */,
 				F0551FDE19C2EB4D001F817D /* addPostitCVxib.m */,
@@ -569,6 +577,7 @@
 				F0EE016D19C1CBF700C4EE2D /* lyon-partdieu.gpx in Resources */,
 				F052CCCE19BF3D8300A82D01 /* OpenCity-Icon-40.png in Resources */,
 				F052CD0619C0523800A82D01 /* placeholder.gif in Resources */,
+				F021E4F419C336A200C6765F /* createAccount.xib in Resources */,
 				F052CCDC19BF3D8300A82D01 /* OpenCity-Icon-640.png in Resources */,
 				F052CD0219C04CC300A82D01 /* dashboard-icon.png in Resources */,
 				F0E2D01819BB394E000D22B6 /* Images.xcassets in Resources */,
@@ -661,6 +670,7 @@
 				F052CCFC19C03C8300A82D01 /* mainViewController.m in Sources */,
 				F0EE013219C1920D00C4EE2D /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				F052CCF919C0365B00A82D01 /* tableVC.m in Sources */,
+				F021E4F719C3381800C6765F /* createAccount.m in Sources */,
 				F0EE015019C1921600C4EE2D /* AFSecurityPolicy.m in Sources */,
 				F052CCE319BF49F700A82D01 /* SWRevealViewController.m in Sources */,
 				F0551FDF19C2EB4D001F817D /* addPostitCVxib.m in Sources */,
