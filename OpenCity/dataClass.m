@@ -12,6 +12,7 @@
 @synthesize token;
 @synthesize currentLocation;
 @synthesize isConnected;
+@synthesize marker;
 
 static dataClass *instance = nil;
 

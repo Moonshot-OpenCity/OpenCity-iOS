@@ -8,14 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface dataClass : NSObject{
     NSString    *token;
     BOOL        isConnected;
     CLLocation  *currentLocation;
+    GMSMarker   *marker;
 }
 
-@property(nonatomic, retain)NSString *token;
+@property (nonatomic, retain) GMSMarker *marker;
+@property (nonatomic, retain)NSString *token;
 @property BOOL isConnected;
 @property CLLocation *currentLocation;
 +(dataClass*)getInstance;

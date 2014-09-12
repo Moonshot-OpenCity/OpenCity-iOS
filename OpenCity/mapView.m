@@ -56,11 +56,13 @@
     dataClass *obj = [dataClass getInstance];
     if (obj.isConnected == TRUE)
     {
+        obj.marker = marker;
         GMSGeocoder *geocoder = [GMSGeocoder geocoder];
         [geocoder reverseGeocodeCoordinate:marker.position completionHandler:^(GMSReverseGeocodeResponse *response, NSError *error)
          {
              UIView *test = [[[NSBundle mainBundle] loadNibNamed:@"addPostitCView" owner:self options:nil] objectAtIndex:0];
-             test.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+             test.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0];
+             obj.marker = marker;
              [self.view addSubview:test];
          }];
     }

@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface addPostitCVxib : UIView
 
 @property (strong, nonatomic) IBOutlet UITextView *descriptionField;
 @property (strong, nonatomic) IBOutlet UITextField *titleField;
+@property (strong, nonatomic) NSString *lon;
+@property (strong, nonatomic) NSString *lat;
+@property (strong, nonatomic) GMSMarker *marker;
 
+-(void)setCoordinates:(NSInteger*)lat lon:(NSInteger*)lon;
 
 @end
