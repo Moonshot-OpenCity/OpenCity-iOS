@@ -28,6 +28,9 @@
     [self.titleField resignFirstResponder];
     [self.descriptionField resignFirstResponder];
 }
+- (IBAction)annulerButton:(id)sender {
+    [self removeFromSuperview];
+}
 
 - (IBAction)okButtonTapped:(id)sender
 {
@@ -53,8 +56,8 @@
                                                         delegate:nil
                                                cancelButtonTitle:@"OK"
                                                otherButtonTitles:nil];
+         [self removeFromSuperview];
          [alert show];
-         
      } failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Echec de l'opération"
@@ -63,8 +66,6 @@
                                                cancelButtonTitle:@"OK"
                                                otherButtonTitles:nil];
          [alert show];
-         NSLog(@"%@", operation);
-         
      }];
 }
 //

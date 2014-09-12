@@ -56,6 +56,16 @@
                                 <action selector="createAccount:" destination="iN0-l3-epB" eventType="touchUpInside" id="Dco-Pp-Re1"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6a-xL-iUK">
+                            <rect key="frame" x="137" y="489" width="46" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Retour">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="retourButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="ubn-og-uqp"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <gestureRecognizers/>
                     <connections>

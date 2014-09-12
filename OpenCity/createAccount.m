@@ -27,7 +27,6 @@
     [self.pseudoField resignFirstResponder];
 }
 
-
 - (IBAction)pseudoBegin:(id)sender {
     UITextField *textField = (UITextField *)sender;
     self.lastScroll = textField.frame.origin.y;
@@ -46,6 +45,10 @@
     [self.scrollView setContentOffset:CGPointMake(0, self.lastScroll/3) animated:YES];
 }
 
+- (IBAction)retourButton:(id)sender
+{
+    [self removeFromSuperview];
+}
 
 - (IBAction)createAccount:(id)sender
 {
