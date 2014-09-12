@@ -8,7 +8,7 @@
 
 #import "mainViewController.h"
 #import "SWRevealViewController.h"
-
+#import "dashboardCV.h"
 
 @interface mainViewController ()
 
@@ -26,14 +26,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Change button color
-    //self.menuButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"dashboard-bg.png"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+
     SWRevealViewController *revealViewController = self.revealViewController;
     if (revealViewController){
         [self.menuButton setTarget: self.revealViewController];
         [self.menuButton setAction: @selector(revealToggle:)];
         [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
     }
+    UIView *test = [[[NSBundle mainBundle] loadNibNamed:@"dashboardVC" owner:self options:nil] objectAtIndex:0];
+    test.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
+    test.frame = CGRectMake(0, 500, self.view.frame.size.width, 500);
+    [self.view addSubview:test];
 }
 
 - (void)didReceiveMemoryWarning

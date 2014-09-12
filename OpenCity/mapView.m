@@ -121,6 +121,17 @@
     }
 }
 
+- (void)drawMarkers
+{
+    for (GMSMarker *marker in self.markers)
+    {
+        if (marker.map == nil)
+        {
+            marker.map = self.mapView_;
+        }
+    }
+}
+
 - (void)placeMarker:(NSString *)title details:(NSString *)details lat:(NSString *)lat lon:(NSString *)lon type:(NSString *)type
 {
     GMSMarker *marker = [[GMSMarker alloc] init];
@@ -135,17 +146,6 @@
         marker.icon = [GMSMarker markerImageWithColor:[UIColor redColor]];
     marker.map = nil;
     [self.markers addObject:marker];
-}
-
-- (void)drawMarkers
-{
-    for (GMSMarker *marker in self.markers)
-    {
-        if (marker.map == nil)
-        {
-            marker.map = self.mapView_;
-        }
-    }
 }
 
 - (void)viewDidLoad

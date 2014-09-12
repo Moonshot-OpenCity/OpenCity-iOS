@@ -10,6 +10,14 @@
 		58C0137E31524C34B9DDFC64 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 310D2245648B4ECC8FF0E53F /* libPods.a */; };
 		F021E4F419C336A200C6765F /* createAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = F021E4F319C336A200C6765F /* createAccount.xib */; };
 		F021E4F719C3381800C6765F /* createAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = F021E4F619C3381800C6765F /* createAccount.m */; };
+		F021E4F919C375B000C6765F /* takePicture.xib in Resources */ = {isa = PBXBuildFile; fileRef = F021E4F819C375B000C6765F /* takePicture.xib */; };
+		F021E4FD19C375E100C6765F /* takePictureCV.m in Sources */ = {isa = PBXBuildFile; fileRef = F021E4FC19C375E100C6765F /* takePictureCV.m */; };
+		F021E50019C3817A00C6765F /* dashboard-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F021E4FF19C3817A00C6765F /* dashboard-bg.png */; };
+		F021E50319C3875B00C6765F /* dashboardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F021E50219C3875B00C6765F /* dashboardVC.xib */; };
+		F021E50619C3882400C6765F /* dashboardCV.m in Sources */ = {isa = PBXBuildFile; fileRef = F021E50519C3882400C6765F /* dashboardCV.m */; };
+		F021E50819C3894900C6765F /* collapse3.png in Resources */ = {isa = PBXBuildFile; fileRef = F021E50719C3894900C6765F /* collapse3.png */; };
+		F021E50A19C3899100C6765F /* arrow103.png in Resources */ = {isa = PBXBuildFile; fileRef = F021E50919C3899100C6765F /* arrow103.png */; };
+		F021E50C19C38EB400C6765F /* arrow103bot.png in Resources */ = {isa = PBXBuildFile; fileRef = F021E50B19C38EB400C6765F /* arrow103bot.png */; };
 		F052CC7219BF2D2C00A82D01 /* OpenCity-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CC7119BF2D2C00A82D01 /* OpenCity-Logo.png */; };
 		F052CC7419BF396F00A82D01 /* OpenCity-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CC7319BF396F00A82D01 /* OpenCity-Icon.png */; };
 		F052CCCB19BF3D8300A82D01 /* OpenCity-Icon-20.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CCB819BF3D8300A82D01 /* OpenCity-Icon-20.png */; };
@@ -114,6 +122,16 @@
 		F021E4F319C336A200C6765F /* createAccount.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = createAccount.xib; sourceTree = "<group>"; };
 		F021E4F519C3381800C6765F /* createAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = createAccount.h; sourceTree = "<group>"; };
 		F021E4F619C3381800C6765F /* createAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = createAccount.m; sourceTree = "<group>"; };
+		F021E4F819C375B000C6765F /* takePicture.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = takePicture.xib; sourceTree = "<group>"; };
+		F021E4FB19C375E100C6765F /* takePictureCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = takePictureCV.h; sourceTree = "<group>"; };
+		F021E4FC19C375E100C6765F /* takePictureCV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = takePictureCV.m; sourceTree = "<group>"; };
+		F021E4FF19C3817A00C6765F /* dashboard-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dashboard-bg.png"; sourceTree = "<group>"; };
+		F021E50219C3875B00C6765F /* dashboardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = dashboardVC.xib; sourceTree = "<group>"; };
+		F021E50419C3882400C6765F /* dashboardCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dashboardCV.h; sourceTree = "<group>"; };
+		F021E50519C3882400C6765F /* dashboardCV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dashboardCV.m; sourceTree = "<group>"; };
+		F021E50719C3894900C6765F /* collapse3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collapse3.png; sourceTree = "<group>"; };
+		F021E50919C3899100C6765F /* arrow103.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow103.png; sourceTree = "<group>"; };
+		F021E50B19C38EB400C6765F /* arrow103bot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow103bot.png; sourceTree = "<group>"; };
 		F052CC7119BF2D2C00A82D01 /* OpenCity-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OpenCity-Logo.png"; sourceTree = "<group>"; };
 		F052CC7319BF396F00A82D01 /* OpenCity-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OpenCity-Icon.png"; sourceTree = "<group>"; };
 		F052CCB819BF3D8300A82D01 /* OpenCity-Icon-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OpenCity-Icon-20.png"; sourceTree = "<group>"; };
@@ -274,6 +292,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F021E4FA19C375C400C6765F /* addPostit */ = {
+			isa = PBXGroup;
+			children = (
+				F0551FDB19C2E9FF001F817D /* addPostitCView.xib */,
+				F021E4FB19C375E100C6765F /* takePictureCV.h */,
+				F021E4FC19C375E100C6765F /* takePictureCV.m */,
+				F021E4F819C375B000C6765F /* takePicture.xib */,
+				F0551FDD19C2EB4D001F817D /* addPostitCVxib.h */,
+				F0551FDE19C2EB4D001F817D /* addPostitCVxib.m */,
+			);
+			name = addPostit;
+			sourceTree = "<group>";
+		};
+		F021E4FE19C37B0700C6765F /* loginVC */ = {
+			isa = PBXGroup;
+			children = (
+				F052CD0A19C06F3E00A82D01 /* loginViewController.h */,
+				F052CD0B19C06F3E00A82D01 /* loginViewController.m */,
+				F021E4F319C336A200C6765F /* createAccount.xib */,
+				F021E4F519C3381800C6765F /* createAccount.h */,
+				F021E4F619C3381800C6765F /* createAccount.m */,
+			);
+			name = loginVC;
+			sourceTree = "<group>";
+		};
+		F021E50119C386F300C6765F /* dashboardVC */ = {
+			isa = PBXGroup;
+			children = (
+				F052CCFA19C03C8300A82D01 /* mainViewController.h */,
+				F052CCFB19C03C8300A82D01 /* mainViewController.m */,
+				F021E50219C3875B00C6765F /* dashboardVC.xib */,
+				F021E50419C3882400C6765F /* dashboardCV.h */,
+				F021E50519C3882400C6765F /* dashboardCV.m */,
+			);
+			name = dashboardVC;
+			sourceTree = "<group>";
+		};
 		F052CC6E19BF2CC700A82D01 /* assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +338,10 @@
 				F052CCFF19C049F800A82D01 /* reveal-icon.png */,
 				F052CC7319BF396F00A82D01 /* OpenCity-Icon.png */,
 				F052CCEF19BF53F800A82D01 /* background.png */,
+				F021E4FF19C3817A00C6765F /* dashboard-bg.png */,
+				F021E50719C3894900C6765F /* collapse3.png */,
+				F021E50919C3899100C6765F /* arrow103.png */,
+				F021E50B19C38EB400C6765F /* arrow103bot.png */,
 				F052CC7519BF3C1200A82D01 /* icons */,
 				F052CC7119BF2D2C00A82D01 /* OpenCity-Logo.png */,
 			);
@@ -385,23 +444,16 @@
 				F0E2D00F19BB394E000D22B6 /* AppDelegate.m */,
 				F0EE016719C1C0D800C4EE2D /* locationVC.h */,
 				F0EE016819C1C0D800C4EE2D /* locationVC.m */,
-				F052CD0A19C06F3E00A82D01 /* loginViewController.h */,
-				F052CD0B19C06F3E00A82D01 /* loginViewController.m */,
 				F0EE015E19C1B40C00C4EE2D /* dataClass.h */,
 				F0EE015F19C1B40C00C4EE2D /* dataClass.m */,
-				F021E4F319C336A200C6765F /* createAccount.xib */,
-				F021E4F519C3381800C6765F /* createAccount.h */,
-				F021E4F619C3381800C6765F /* createAccount.m */,
-				F0551FDB19C2E9FF001F817D /* addPostitCView.xib */,
-				F0551FDD19C2EB4D001F817D /* addPostitCVxib.h */,
-				F0551FDE19C2EB4D001F817D /* addPostitCVxib.m */,
+				F021E50119C386F300C6765F /* dashboardVC */,
+				F021E4FE19C37B0700C6765F /* loginVC */,
+				F021E4FA19C375C400C6765F /* addPostit */,
 				F0E2D01119BB394E000D22B6 /* Main.storyboard */,
 				F0EE017019C1E04000C4EE2D /* addPostit.h */,
 				F0EE017119C1E04000C4EE2D /* addPostit.m */,
 				F0EE015919C19BE500C4EE2D /* mapView.h */,
 				F0EE015A19C19BE500C4EE2D /* mapView.m */,
-				F052CCFA19C03C8300A82D01 /* mainViewController.h */,
-				F052CCFB19C03C8300A82D01 /* mainViewController.m */,
 				F052CCF719C0365B00A82D01 /* tableVC.h */,
 				F052CCF819C0365B00A82D01 /* tableVC.m */,
 				F0E2D01419BB394E000D22B6 /* ViewController.h */,
@@ -564,6 +616,7 @@
 			files = (
 				F052CCCC19BF3D8300A82D01 /* OpenCity-Icon-29.png in Resources */,
 				F052CCD319BF3D8300A82D01 /* OpenCity-Icon-60.png in Resources */,
+				F021E50C19C38EB400C6765F /* arrow103bot.png in Resources */,
 				F052CCD119BF3D8300A82D01 /* OpenCity-Icon-57.png in Resources */,
 				F052CCDA19BF3D8300A82D01 /* OpenCity-Icon-320.png in Resources */,
 				F052CCDD19BF3D8300A82D01 /* OpenCity-Icon-1024.png in Resources */,
@@ -577,6 +630,7 @@
 				F0EE016D19C1CBF700C4EE2D /* lyon-partdieu.gpx in Resources */,
 				F052CCCE19BF3D8300A82D01 /* OpenCity-Icon-40.png in Resources */,
 				F052CD0619C0523800A82D01 /* placeholder.gif in Resources */,
+				F021E4F919C375B000C6765F /* takePicture.xib in Resources */,
 				F021E4F419C336A200C6765F /* createAccount.xib in Resources */,
 				F052CCDC19BF3D8300A82D01 /* OpenCity-Icon-640.png in Resources */,
 				F052CD0219C04CC300A82D01 /* dashboard-icon.png in Resources */,
@@ -592,11 +646,15 @@
 				F0E2D00A19BB394E000D22B6 /* InfoPlist.strings in Resources */,
 				F052CCCB19BF3D8300A82D01 /* OpenCity-Icon-20.png in Resources */,
 				F0E2D01319BB394E000D22B6 /* Main.storyboard in Resources */,
+				F021E50319C3875B00C6765F /* dashboardVC.xib in Resources */,
+				F021E50019C3817A00C6765F /* dashboard-bg.png in Resources */,
 				F0551FDC19C2E9FF001F817D /* addPostitCView.xib in Resources */,
 				F052CCD019BF3D8300A82D01 /* OpenCity-Icon-50.png in Resources */,
 				F052CD0019C049F800A82D01 /* reveal-icon.png in Resources */,
 				F052CCD219BF3D8300A82D01 /* OpenCity-Icon-58.png in Resources */,
+				F021E50A19C3899100C6765F /* arrow103.png in Resources */,
 				F0F3A00619BE3CC400CCDCB8 /* GoogleMaps.bundle in Resources */,
+				F021E50819C3894900C6765F /* collapse3.png in Resources */,
 				F052CCD419BF3D8300A82D01 /* OpenCity-Icon-64.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -658,11 +716,13 @@
 				F0EE014F19C1921600C4EE2D /* AFNetworkReachabilityManager.m in Sources */,
 				F0EE014C19C1921600C4EE2D /* AFHTTPRequestOperation.m in Sources */,
 				F0EE015219C1921600C4EE2D /* AFURLRequestSerialization.m in Sources */,
+				F021E50619C3882400C6765F /* dashboardCV.m in Sources */,
 				F0EE015119C1921600C4EE2D /* AFURLConnectionOperation.m in Sources */,
 				F0EE017219C1E04000C4EE2D /* addPostit.m in Sources */,
 				F0EE015419C1921600C4EE2D /* AFURLSessionManager.m in Sources */,
 				F0E2D00C19BB394E000D22B6 /* main.m in Sources */,
 				F0EE013319C1920D00C4EE2D /* UIAlertView+AFNetworking.m in Sources */,
+				F021E4FD19C375E100C6765F /* takePictureCV.m in Sources */,
 				F0EE013419C1920D00C4EE2D /* UIButton+AFNetworking.m in Sources */,
 				F0EE013119C1920D00C4EE2D /* AFNetworkActivityIndicatorManager.m in Sources */,
 				F0EE013519C1920D00C4EE2D /* UIImageView+AFNetworking.m in Sources */,

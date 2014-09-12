@@ -20,7 +20,7 @@ static dataClass *instance = nil;
 {
     @synchronized(self)
     {
-        if(instance == nil)
+        if (instance == nil)
         {
             instance= [dataClass new];
         }
