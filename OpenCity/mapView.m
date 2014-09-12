@@ -14,6 +14,7 @@
 #import "AFHTTPRequestOperationManager.h"
 #import "AFNetworking.h"
 #import "AFHTTPSessionManager.h"
+#import "addPostitCVxib.h"
 
 @interface mapView () <GMSMapViewDelegate>
 
@@ -58,9 +59,9 @@
         GMSGeocoder *geocoder = [GMSGeocoder geocoder];
         [geocoder reverseGeocodeCoordinate:marker.position completionHandler:^(GMSReverseGeocodeResponse *response, NSError *error)
          {
-             addPostit *addpostit = [[addPostit alloc] initWithNibName:@"addPostit" bundle:nil];
-             [addpostit setResponseData:response];
-             [self.navigationController pushViewController:addpostit animated:YES];
+             UIView *test = [[[NSBundle mainBundle] loadNibNamed:@"addPostitCView" owner:self options:nil] objectAtIndex:0];
+             test.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+             [self.view addSubview:test];
          }];
     }
     else

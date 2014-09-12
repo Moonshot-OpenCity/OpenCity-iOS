@@ -39,6 +39,8 @@
 		F052CD0619C0523800A82D01 /* placeholder.gif in Resources */ = {isa = PBXBuildFile; fileRef = F052CD0519C0523800A82D01 /* placeholder.gif */; };
 		F052CD0C19C06F3E00A82D01 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F052CD0B19C06F3E00A82D01 /* loginViewController.m */; };
 		F052CD0E19C06F7800A82D01 /* backgroundLogin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F052CD0D19C06F7800A82D01 /* backgroundLogin.jpg */; };
+		F0551FDC19C2E9FF001F817D /* addPostitCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0551FDB19C2E9FF001F817D /* addPostitCView.xib */; };
+		F0551FDF19C2EB4D001F817D /* addPostitCVxib.m in Sources */ = {isa = PBXBuildFile; fileRef = F0551FDE19C2EB4D001F817D /* addPostitCVxib.m */; };
 		F0E2D00019BB394E000D22B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E2CFFF19BB394E000D22B6 /* Foundation.framework */; };
 		F0E2D00219BB394E000D22B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E2D00119BB394E000D22B6 /* CoreGraphics.framework */; };
 		F0E2D00419BB394E000D22B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E2D00319BB394E000D22B6 /* UIKit.framework */; };
@@ -142,6 +144,9 @@
 		F052CD0A19C06F3E00A82D01 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		F052CD0B19C06F3E00A82D01 /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 		F052CD0D19C06F7800A82D01 /* backgroundLogin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundLogin.jpg; sourceTree = "<group>"; };
+		F0551FDB19C2E9FF001F817D /* addPostitCView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addPostitCView.xib; sourceTree = "<group>"; };
+		F0551FDD19C2EB4D001F817D /* addPostitCVxib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addPostitCVxib.h; sourceTree = "<group>"; };
+		F0551FDE19C2EB4D001F817D /* addPostitCVxib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addPostitCVxib.m; sourceTree = "<group>"; };
 		F0E2CFFC19BB394E000D22B6 /* OpenCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E2CFFF19BB394E000D22B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F0E2D00119BB394E000D22B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -379,6 +384,9 @@
 				F052CD0B19C06F3E00A82D01 /* loginViewController.m */,
 				F0EE015E19C1B40C00C4EE2D /* dataClass.h */,
 				F0EE015F19C1B40C00C4EE2D /* dataClass.m */,
+				F0551FDB19C2E9FF001F817D /* addPostitCView.xib */,
+				F0551FDD19C2EB4D001F817D /* addPostitCVxib.h */,
+				F0551FDE19C2EB4D001F817D /* addPostitCVxib.m */,
 				F0E2D01119BB394E000D22B6 /* Main.storyboard */,
 				F0EE017019C1E04000C4EE2D /* addPostit.h */,
 				F0EE017119C1E04000C4EE2D /* addPostit.m */,
@@ -575,6 +583,7 @@
 				F0E2D00A19BB394E000D22B6 /* InfoPlist.strings in Resources */,
 				F052CCCB19BF3D8300A82D01 /* OpenCity-Icon-20.png in Resources */,
 				F0E2D01319BB394E000D22B6 /* Main.storyboard in Resources */,
+				F0551FDC19C2E9FF001F817D /* addPostitCView.xib in Resources */,
 				F052CCD019BF3D8300A82D01 /* OpenCity-Icon-50.png in Resources */,
 				F052CD0019C049F800A82D01 /* reveal-icon.png in Resources */,
 				F052CCD219BF3D8300A82D01 /* OpenCity-Icon-58.png in Resources */,
@@ -654,6 +663,7 @@
 				F052CCF919C0365B00A82D01 /* tableVC.m in Sources */,
 				F0EE015019C1921600C4EE2D /* AFSecurityPolicy.m in Sources */,
 				F052CCE319BF49F700A82D01 /* SWRevealViewController.m in Sources */,
+				F0551FDF19C2EB4D001F817D /* addPostitCVxib.m in Sources */,
 				F0EE014D19C1921600C4EE2D /* AFHTTPRequestOperationManager.m in Sources */,
 				F0EE015B19C19BE500C4EE2D /* mapView.m in Sources */,
 				F0EE013619C1920D00C4EE2D /* UIProgressView+AFNetworking.m in Sources */,
