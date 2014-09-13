@@ -24,11 +24,10 @@
                                 <outletCollection property="gestureRecognizers" destination="Zal-tT-Ga0" appends="YES" id="dkf-I1-8ki"/>
                             </connections>
                         </textField>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ksp-J1-Xdj">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="ksp-J1-Xdj">
                             <rect key="frame" x="20" y="56" width="240" height="341"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
@@ -52,6 +51,33 @@
                                 <action selector="annulerButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="uuk-Mn-5mX"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VU8-gw-Z8X">
+                            <rect key="frame" x="157" y="9" width="62" height="51"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="grey_thumb_down.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="thumbDownClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="WKp-gF-d0m"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdf-tH-Wwv">
+                            <rect key="frame" x="219" y="-1" width="50" height="61"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="grey_thumb_up.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="thumbUpClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="Btn-Hy-CiR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1n-SH-cGG">
+                            <rect key="frame" x="128" y="417" width="25" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="social77.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </scrollView>
@@ -62,6 +88,8 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>
                 <outlet property="descriptionField" destination="ksp-J1-Xdj" id="Vj3-yr-IND"/>
+                <outlet property="thumbDownButton" destination="VU8-gw-Z8X" id="4Jv-xk-AqK"/>
+                <outlet property="thumbUpButton" destination="jdf-tH-Wwv" id="Kcw-DE-f50"/>
                 <outlet property="titleField" destination="cO2-6j-gcl" id="hkz-cP-kXK"/>
                 <outletCollection property="gestureRecognizers" destination="Zal-tT-Ga0" appends="YES" id="fSV-YN-kDt"/>
             </connections>
@@ -79,4 +107,9 @@
             </connections>
         </tapGestureRecognizer>
     </objects>
+    <resources>
+        <image name="grey_thumb_down.png" width="256" height="256"/>
+        <image name="grey_thumb_up.png" width="256" height="256"/>
+        <image name="social77.png" width="64" height="64"/>
+    </resources>
 </document>

@@ -35,7 +35,7 @@
     self.menuItems = @[@"title", @"dashboard", @"carte", @"connect"];
 }
 
-- (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     UINavigationController *destViewController = (UINavigationController*)segue.destinationViewController;

@@ -18,6 +18,12 @@
 		F021E50819C3894900C6765F /* collapse3.png in Resources */ = {isa = PBXBuildFile; fileRef = F021E50719C3894900C6765F /* collapse3.png */; };
 		F021E50A19C3899100C6765F /* arrow103.png in Resources */ = {isa = PBXBuildFile; fileRef = F021E50919C3899100C6765F /* arrow103.png */; };
 		F021E50C19C38EB400C6765F /* arrow103bot.png in Resources */ = {isa = PBXBuildFile; fileRef = F021E50B19C38EB400C6765F /* arrow103bot.png */; };
+		F021E51219C42F7E00C6765F /* grey_thumb_down.png in Resources */ = {isa = PBXBuildFile; fileRef = F021E50E19C42F7E00C6765F /* grey_thumb_down.png */; };
+		F021E51319C42F7E00C6765F /* grey_thumb_up.png in Resources */ = {isa = PBXBuildFile; fileRef = F021E50F19C42F7E00C6765F /* grey_thumb_up.png */; };
+		F021E51419C42F7E00C6765F /* thumb_down.png in Resources */ = {isa = PBXBuildFile; fileRef = F021E51019C42F7E00C6765F /* thumb_down.png */; };
+		F021E51519C42F7E00C6765F /* thumb_up.png in Resources */ = {isa = PBXBuildFile; fileRef = F021E51119C42F7E00C6765F /* thumb_up.png */; };
+		F021E51719C434F000C6765F /* social77.png in Resources */ = {isa = PBXBuildFile; fileRef = F021E51619C434F000C6765F /* social77.png */; };
+		F021E51919C4377B00C6765F /* arrow408.png in Resources */ = {isa = PBXBuildFile; fileRef = F021E51819C4377B00C6765F /* arrow408.png */; };
 		F052CC7219BF2D2C00A82D01 /* OpenCity-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CC7119BF2D2C00A82D01 /* OpenCity-Logo.png */; };
 		F052CC7419BF396F00A82D01 /* OpenCity-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CC7319BF396F00A82D01 /* OpenCity-Icon.png */; };
 		F052CCCB19BF3D8300A82D01 /* OpenCity-Icon-20.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CCB819BF3D8300A82D01 /* OpenCity-Icon-20.png */; };
@@ -132,6 +138,12 @@
 		F021E50719C3894900C6765F /* collapse3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collapse3.png; sourceTree = "<group>"; };
 		F021E50919C3899100C6765F /* arrow103.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow103.png; sourceTree = "<group>"; };
 		F021E50B19C38EB400C6765F /* arrow103bot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow103bot.png; sourceTree = "<group>"; };
+		F021E50E19C42F7E00C6765F /* grey_thumb_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey_thumb_down.png; sourceTree = "<group>"; };
+		F021E50F19C42F7E00C6765F /* grey_thumb_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey_thumb_up.png; sourceTree = "<group>"; };
+		F021E51019C42F7E00C6765F /* thumb_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_down.png; sourceTree = "<group>"; };
+		F021E51119C42F7E00C6765F /* thumb_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_up.png; sourceTree = "<group>"; };
+		F021E51619C434F000C6765F /* social77.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = social77.png; sourceTree = "<group>"; };
+		F021E51819C4377B00C6765F /* arrow408.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow408.png; sourceTree = "<group>"; };
 		F052CC7119BF2D2C00A82D01 /* OpenCity-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OpenCity-Logo.png"; sourceTree = "<group>"; };
 		F052CC7319BF396F00A82D01 /* OpenCity-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OpenCity-Icon.png"; sourceTree = "<group>"; };
 		F052CCB819BF3D8300A82D01 /* OpenCity-Icon-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OpenCity-Icon-20.png"; sourceTree = "<group>"; };
@@ -295,6 +307,11 @@
 		F021E4FA19C375C400C6765F /* addPostit */ = {
 			isa = PBXGroup;
 			children = (
+				F021E51619C434F000C6765F /* social77.png */,
+				F021E50E19C42F7E00C6765F /* grey_thumb_down.png */,
+				F021E50F19C42F7E00C6765F /* grey_thumb_up.png */,
+				F021E51019C42F7E00C6765F /* thumb_down.png */,
+				F021E51119C42F7E00C6765F /* thumb_up.png */,
 				F0551FDB19C2E9FF001F817D /* addPostitCView.xib */,
 				F021E4FB19C375E100C6765F /* takePictureCV.h */,
 				F021E4FC19C375E100C6765F /* takePictureCV.m */,
@@ -327,6 +344,16 @@
 				F021E50519C3882400C6765F /* dashboardCV.m */,
 			);
 			name = dashboardVC;
+			sourceTree = "<group>";
+		};
+		F021E50D19C42EEC00C6765F /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				F021E51819C4377B00C6765F /* arrow408.png */,
+				F0EE015919C19BE500C4EE2D /* mapView.h */,
+				F0EE015A19C19BE500C4EE2D /* mapView.m */,
+			);
+			name = Map;
 			sourceTree = "<group>";
 		};
 		F052CC6E19BF2CC700A82D01 /* assets */ = {
@@ -452,8 +479,7 @@
 				F0E2D01119BB394E000D22B6 /* Main.storyboard */,
 				F0EE017019C1E04000C4EE2D /* addPostit.h */,
 				F0EE017119C1E04000C4EE2D /* addPostit.m */,
-				F0EE015919C19BE500C4EE2D /* mapView.h */,
-				F0EE015A19C19BE500C4EE2D /* mapView.m */,
+				F021E50D19C42EEC00C6765F /* Map */,
 				F052CCF719C0365B00A82D01 /* tableVC.h */,
 				F052CCF819C0365B00A82D01 /* tableVC.m */,
 				F0E2D01419BB394E000D22B6 /* ViewController.h */,
@@ -615,6 +641,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F052CCCC19BF3D8300A82D01 /* OpenCity-Icon-29.png in Resources */,
+				F021E51519C42F7E00C6765F /* thumb_up.png in Resources */,
 				F052CCD319BF3D8300A82D01 /* OpenCity-Icon-60.png in Resources */,
 				F021E50C19C38EB400C6765F /* arrow103bot.png in Resources */,
 				F052CCD119BF3D8300A82D01 /* OpenCity-Icon-57.png in Resources */,
@@ -624,11 +651,13 @@
 				F0EE016F19C1DC2C00C4EE2D /* login-bg.jpg in Resources */,
 				F052CCD819BF3D8300A82D01 /* OpenCity-Icon-114.png in Resources */,
 				F0EE015819C19B3A00C4EE2D /* city-night.png in Resources */,
+				F021E51719C434F000C6765F /* social77.png in Resources */,
 				F052CCF019BF53F800A82D01 /* background.png in Resources */,
 				F052CD0E19C06F7800A82D01 /* backgroundLogin.jpg in Resources */,
 				F052CCD619BF3D8300A82D01 /* OpenCity-Icon-96.png in Resources */,
 				F0EE016D19C1CBF700C4EE2D /* lyon-partdieu.gpx in Resources */,
 				F052CCCE19BF3D8300A82D01 /* OpenCity-Icon-40.png in Resources */,
+				F021E51419C42F7E00C6765F /* thumb_down.png in Resources */,
 				F052CD0619C0523800A82D01 /* placeholder.gif in Resources */,
 				F021E4F919C375B000C6765F /* takePicture.xib in Resources */,
 				F021E4F419C336A200C6765F /* createAccount.xib in Resources */,
@@ -640,13 +669,16 @@
 				F052CC7419BF396F00A82D01 /* OpenCity-Icon.png in Resources */,
 				F052CD0419C0517B00A82D01 /* map.png in Resources */,
 				F052CC7219BF2D2C00A82D01 /* OpenCity-Logo.png in Resources */,
+				F021E51319C42F7E00C6765F /* grey_thumb_up.png in Resources */,
 				F052CCD919BF3D8300A82D01 /* OpenCity-Icon-144.png in Resources */,
 				F052CCCD19BF3D8300A82D01 /* OpenCity-Icon-30.png in Resources */,
+				F021E51219C42F7E00C6765F /* grey_thumb_down.png in Resources */,
 				F052CCD719BF3D8300A82D01 /* OpenCity-Icon-100.png in Resources */,
 				F0E2D00A19BB394E000D22B6 /* InfoPlist.strings in Resources */,
 				F052CCCB19BF3D8300A82D01 /* OpenCity-Icon-20.png in Resources */,
 				F0E2D01319BB394E000D22B6 /* Main.storyboard in Resources */,
 				F021E50319C3875B00C6765F /* dashboardVC.xib in Resources */,
+				F021E51919C4377B00C6765F /* arrow408.png in Resources */,
 				F021E50019C3817A00C6765F /* dashboard-bg.png in Resources */,
 				F0551FDC19C2E9FF001F817D /* addPostitCView.xib in Resources */,
 				F052CCD019BF3D8300A82D01 /* OpenCity-Icon-50.png in Resources */,

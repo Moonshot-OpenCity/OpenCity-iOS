@@ -16,5 +16,8 @@
 @property (strong, nonatomic) NSString *lon;
 @property (strong, nonatomic) NSString *lat;
 @property (strong, nonatomic) GMSMarker *marker;
+@property (strong, nonatomic) IBOutlet UIButton *thumbDownButton;
+@property (strong, nonatomic) IBOutlet UIButton *thumbUpButton;
+@property (strong, nonatomic) NSString *test;
 
 @end
