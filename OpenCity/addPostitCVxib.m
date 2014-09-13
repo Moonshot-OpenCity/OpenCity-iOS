@@ -30,6 +30,13 @@
     return self;
 }
 
+
+-(void)setScrollAlpha:(float)alpha
+{
+    [self.scrollView setAlpha:alpha];
+}
+
+
 - (IBAction)taptapta:(id)sender
 {
     [self.titleField resignFirstResponder];

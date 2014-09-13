@@ -23,7 +23,10 @@
 		F021E51419C42F7E00C6765F /* thumb_down.png in Resources */ = {isa = PBXBuildFile; fileRef = F021E51019C42F7E00C6765F /* thumb_down.png */; };
 		F021E51519C42F7E00C6765F /* thumb_up.png in Resources */ = {isa = PBXBuildFile; fileRef = F021E51119C42F7E00C6765F /* thumb_up.png */; };
 		F021E51719C434F000C6765F /* social77.png in Resources */ = {isa = PBXBuildFile; fileRef = F021E51619C434F000C6765F /* social77.png */; };
-		F021E51919C4377B00C6765F /* arrow408.png in Resources */ = {isa = PBXBuildFile; fileRef = F021E51819C4377B00C6765F /* arrow408.png */; };
+		F021E51B19C43A3B00C6765F /* arrow408.png in Resources */ = {isa = PBXBuildFile; fileRef = F021E51A19C43A3B00C6765F /* arrow408.png */; };
+		F021E52119C4528C00C6765F /* customMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = F021E52019C4528C00C6765F /* customMarker.m */; };
+		F021E52319C454CB00C6765F /* viewPostitCV.xib in Resources */ = {isa = PBXBuildFile; fileRef = F021E52219C454CB00C6765F /* viewPostitCV.xib */; };
+		F021E52619C454F900C6765F /* viewPostit.m in Sources */ = {isa = PBXBuildFile; fileRef = F021E52519C454F900C6765F /* viewPostit.m */; };
 		F052CC7219BF2D2C00A82D01 /* OpenCity-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CC7119BF2D2C00A82D01 /* OpenCity-Logo.png */; };
 		F052CC7419BF396F00A82D01 /* OpenCity-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CC7319BF396F00A82D01 /* OpenCity-Icon.png */; };
 		F052CCCB19BF3D8300A82D01 /* OpenCity-Icon-20.png in Resources */ = {isa = PBXBuildFile; fileRef = F052CCB819BF3D8300A82D01 /* OpenCity-Icon-20.png */; };
@@ -143,7 +146,12 @@
 		F021E51019C42F7E00C6765F /* thumb_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_down.png; sourceTree = "<group>"; };
 		F021E51119C42F7E00C6765F /* thumb_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_up.png; sourceTree = "<group>"; };
 		F021E51619C434F000C6765F /* social77.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = social77.png; sourceTree = "<group>"; };
-		F021E51819C4377B00C6765F /* arrow408.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow408.png; sourceTree = "<group>"; };
+		F021E51A19C43A3B00C6765F /* arrow408.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow408.png; sourceTree = "<group>"; };
+		F021E51F19C4528C00C6765F /* customMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customMarker.h; sourceTree = "<group>"; };
+		F021E52019C4528C00C6765F /* customMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customMarker.m; sourceTree = "<group>"; };
+		F021E52219C454CB00C6765F /* viewPostitCV.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = viewPostitCV.xib; sourceTree = "<group>"; };
+		F021E52419C454F900C6765F /* viewPostit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = viewPostit.h; sourceTree = "<group>"; };
+		F021E52519C454F900C6765F /* viewPostit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = viewPostit.m; sourceTree = "<group>"; };
 		F052CC7119BF2D2C00A82D01 /* OpenCity-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OpenCity-Logo.png"; sourceTree = "<group>"; };
 		F052CC7319BF396F00A82D01 /* OpenCity-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OpenCity-Icon.png"; sourceTree = "<group>"; };
 		F052CCB819BF3D8300A82D01 /* OpenCity-Icon-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OpenCity-Icon-20.png"; sourceTree = "<group>"; };
@@ -349,7 +357,11 @@
 		F021E50D19C42EEC00C6765F /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				F021E51819C4377B00C6765F /* arrow408.png */,
+				F021E4FA19C375C400C6765F /* addPostit */,
+				F021E52219C454CB00C6765F /* viewPostitCV.xib */,
+				F021E52419C454F900C6765F /* viewPostit.h */,
+				F021E52519C454F900C6765F /* viewPostit.m */,
+				F021E51A19C43A3B00C6765F /* arrow408.png */,
 				F0EE015919C19BE500C4EE2D /* mapView.h */,
 				F0EE015A19C19BE500C4EE2D /* mapView.m */,
 			);
@@ -463,6 +475,8 @@
 		F0E2D00519BB394E000D22B6 /* OpenCity */ = {
 			isa = PBXGroup;
 			children = (
+				F021E51F19C4528C00C6765F /* customMarker.h */,
+				F021E52019C4528C00C6765F /* customMarker.m */,
 				F0EE016C19C1CBF700C4EE2D /* lyon-partdieu.gpx */,
 				F0EE011F19C191FE00C4EE2D /* AFNetworking */,
 				F052CCE419BF4AA200A82D01 /* Library */,
@@ -475,7 +489,6 @@
 				F0EE015F19C1B40C00C4EE2D /* dataClass.m */,
 				F021E50119C386F300C6765F /* dashboardVC */,
 				F021E4FE19C37B0700C6765F /* loginVC */,
-				F021E4FA19C375C400C6765F /* addPostit */,
 				F0E2D01119BB394E000D22B6 /* Main.storyboard */,
 				F0EE017019C1E04000C4EE2D /* addPostit.h */,
 				F0EE017119C1E04000C4EE2D /* addPostit.m */,
@@ -656,6 +669,7 @@
 				F052CD0E19C06F7800A82D01 /* backgroundLogin.jpg in Resources */,
 				F052CCD619BF3D8300A82D01 /* OpenCity-Icon-96.png in Resources */,
 				F0EE016D19C1CBF700C4EE2D /* lyon-partdieu.gpx in Resources */,
+				F021E52319C454CB00C6765F /* viewPostitCV.xib in Resources */,
 				F052CCCE19BF3D8300A82D01 /* OpenCity-Icon-40.png in Resources */,
 				F021E51419C42F7E00C6765F /* thumb_down.png in Resources */,
 				F052CD0619C0523800A82D01 /* placeholder.gif in Resources */,
@@ -678,7 +692,7 @@
 				F052CCCB19BF3D8300A82D01 /* OpenCity-Icon-20.png in Resources */,
 				F0E2D01319BB394E000D22B6 /* Main.storyboard in Resources */,
 				F021E50319C3875B00C6765F /* dashboardVC.xib in Resources */,
-				F021E51919C4377B00C6765F /* arrow408.png in Resources */,
+				F021E51B19C43A3B00C6765F /* arrow408.png in Resources */,
 				F021E50019C3817A00C6765F /* dashboard-bg.png in Resources */,
 				F0551FDC19C2E9FF001F817D /* addPostitCView.xib in Resources */,
 				F052CCD019BF3D8300A82D01 /* OpenCity-Icon-50.png in Resources */,
@@ -756,12 +770,14 @@
 				F0EE013319C1920D00C4EE2D /* UIAlertView+AFNetworking.m in Sources */,
 				F021E4FD19C375E100C6765F /* takePictureCV.m in Sources */,
 				F0EE013419C1920D00C4EE2D /* UIButton+AFNetworking.m in Sources */,
+				F021E52619C454F900C6765F /* viewPostit.m in Sources */,
 				F0EE013119C1920D00C4EE2D /* AFNetworkActivityIndicatorManager.m in Sources */,
 				F0EE013519C1920D00C4EE2D /* UIImageView+AFNetworking.m in Sources */,
 				F0EE013719C1920D00C4EE2D /* UIRefreshControl+AFNetworking.m in Sources */,
 				F052CCFC19C03C8300A82D01 /* mainViewController.m in Sources */,
 				F0EE013219C1920D00C4EE2D /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				F052CCF919C0365B00A82D01 /* tableVC.m in Sources */,
+				F021E52119C4528C00C6765F /* customMarker.m in Sources */,
 				F021E4F719C3381800C6765F /* createAccount.m in Sources */,
 				F0EE015019C1921600C4EE2D /* AFSecurityPolicy.m in Sources */,
 				F052CCE319BF49F700A82D01 /* SWRevealViewController.m in Sources */,

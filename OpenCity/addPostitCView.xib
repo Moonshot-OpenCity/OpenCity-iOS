@@ -79,7 +79,8 @@
                             </state>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -88,6 +89,7 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>
                 <outlet property="descriptionField" destination="ksp-J1-Xdj" id="Vj3-yr-IND"/>
+                <outlet property="scrollView" destination="CST-bX-1b9" id="U0f-oW-mDt"/>
                 <outlet property="thumbDownButton" destination="VU8-gw-Z8X" id="4Jv-xk-AqK"/>
                 <outlet property="thumbUpButton" destination="jdf-tH-Wwv" id="Kcw-DE-f50"/>
                 <outlet property="titleField" destination="cO2-6j-gcl" id="hkz-cP-kXK"/>

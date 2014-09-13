@@ -19,5 +19,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *thumbDownButton;
 @property (strong, nonatomic) IBOutlet UIButton *thumbUpButton;
 @property (strong, nonatomic) NSString *test;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+
+-(void)setScrollAlpha:(float)alpha;
 
 @end

@@ -13,6 +13,7 @@
 @synthesize currentLocation;
 @synthesize isConnected;
 @synthesize marker;
+@synthesize cMarker;
 
 static dataClass *instance = nil;
 

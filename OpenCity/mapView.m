@@ -15,6 +15,7 @@
 #import "AFNetworking.h"
 #import "AFHTTPSessionManager.h"
 #import "addPostitCVxib.h"
+#import "customMarker.h"
 
 @interface mapView () <GMSMapViewDelegate>
 
@@ -54,27 +55,54 @@
 - (void) mapView:(GMSMapView *)mapView didTapInfoWindowOfMarker:(GMSMarker *)marker
 {
     dataClass *obj = [dataClass getInstance];
-    if (obj.isConnected == TRUE)
+    if ([marker isKindOfClass:[customMarker class]])
     {
-        obj.marker = marker;
-        GMSGeocoder *geocoder = [GMSGeocoder geocoder];
-        [geocoder reverseGeocodeCoordinate:marker.position completionHandler:^(GMSReverseGeocodeResponse *response, NSError *error)
-         {
-             UIView *test = [[[NSBundle mainBundle] loadNibNamed:@"addPostitCView" owner:self options:nil] objectAtIndex:0];
-             test.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0];
-             obj.marker = marker;
-             [self.view addSubview:test];
-         }];
+        if (obj.isConnected == TRUE)
+        {
+            UIView *test = [[[NSBundle mainBundle] loadNibNamed:@"viewPostitCV" owner:self options:nil] objectAtIndex:0];
+            test.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
+            if ([test isKindOfClass:[viewPostit class]])
+            {
+                dataClass *obj = [dataClass getInstance];
+                obj.marker = marker;
+                obj.cMarker = (customMarker*)marker;
+                [(viewPostit*)test showMarkerData];
+            }
+            [self.view addSubview:test];
+        }
+        else
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Echec!"
+                                                            message:@"Connectez vous pour consulter le contenu d'un post-it!"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
     }
     else
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Echec!"
-                                                        message:@"Connectez vous pour ajouter un post-it!"
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-
+        if (obj.isConnected == TRUE)
+        {
+            obj.marker = marker;
+            GMSGeocoder *geocoder = [GMSGeocoder geocoder];
+            [geocoder reverseGeocodeCoordinate:marker.position completionHandler:^(GMSReverseGeocodeResponse *response, NSError *error)
+             {
+                 UIView *test = [[[NSBundle mainBundle] loadNibNamed:@"addPostitCView" owner:self options:nil] objectAtIndex:0];
+                 test.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+                 obj.marker = marker;
+                 [self.view addSubview:test];
+             }];
+        }
+        else
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Echec!"
+                                                            message:@"Connectez vous pour ajouter un post-it!"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
     }
 }
 
@@ -117,13 +145,13 @@
 {
     for (id key in self.postItList)
     {
-        [self placeMarker:key[@"title"] details:key[@"description"] lat:key[@"location"][0] lon:key[@"location"][1] type:key[@"type"]];
+        [self placeMarker:key[@"title"] details:key[@"description"] lat:key[@"location"][0] lon:key[@"location"][1] type:key[@"type"] objID:key[@"_id"]];
     }
 }
 
 - (void)drawMarkers
 {
-    for (GMSMarker *marker in self.markers)
+    for (customMarker *marker in self.markers)
     {
         if (marker.map == nil)
         {
@@ -132,13 +160,14 @@
     }
 }
 
-- (void)placeMarker:(NSString *)title details:(NSString *)details lat:(NSString *)lat lon:(NSString *)lon type:(NSString *)type
+- (void)placeMarker:(NSString *)title details:(NSString *)details lat:(NSString *)lat lon:(NSString *)lon type:(NSString *)type objID:(NSString*)objID
 {
-    GMSMarker *marker = [[GMSMarker alloc] init];
+    customMarker *marker = [[customMarker alloc] init];
     
     marker.position = CLLocationCoordinate2DMake([lat doubleValue], [lon doubleValue]);
     marker.title = title;
     marker.snippet = details;
+    marker.objectID = objID;
     marker.appearAnimation = kGMSMarkerAnimationPop;
     if ([type isEqualToString:@"positive"])
         marker.icon = [GMSMarker markerImageWithColor:[UIColor greenColor]];
@@ -146,6 +175,14 @@
         marker.icon = [GMSMarker markerImageWithColor:[UIColor redColor]];
     marker.map = nil;
     [self.markers addObject:marker];
+}
+
+-(void)refreshMap
+{
+    dataClass *obj = [dataClass getInstance];
+    CLLocation *currentLocation = [[CLLocation alloc] initWithLatitude:self.camera.target.latitude longitude:self.camera.target.longitude];
+    obj.currentLocation = currentLocation;
+    [self changeCamera];
 }
 
 - (void)viewDidLoad
@@ -163,6 +200,8 @@
     self.mapView_.mapType = kGMSTypeNormal;
     self.mapView_.settings.compassButton = YES;
     self.mapView_.settings.myLocationButton = YES;
+    [self.navigationItem.rightBarButtonItem setTarget:self];
+    [self.navigationItem.rightBarButtonItem setAction:@selector(refreshMap)];
 }
 
 - (BOOL) didTapMyLocationButtonForMapView:(GMSMapView *)mapView

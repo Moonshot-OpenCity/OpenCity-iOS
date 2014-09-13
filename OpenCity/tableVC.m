@@ -42,7 +42,6 @@
     destViewController.title = [[_menuItems objectAtIndex:indexPath.row] capitalizedString];
     destViewController.navigationItem.hidesBackButton = false;
     UIBarButtonItem *_customBackButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"] style:UIBarButtonItemStyleDone target:nil action:nil];
-    
     SWRevealViewController *revealViewController = self.revealViewController;
     if (revealViewController)
     {
@@ -50,6 +49,11 @@
         [_customBackButton setAction: @selector(revealToggle:)];
         [destViewController.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
         destViewController.navigationItem.leftBarButtonItem = _customBackButton;
+        if ([destViewController isKindOfClass:[mapView class]])
+             {
+                     UIBarButtonItem *_customRefreshButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"arrow408.png"] style:UIBarButtonItemStyleDone target:nil action:nil];
+                 destViewController.navigationItem.rightBarButtonItem = _customRefreshButton;
+             }
     }
     if ([segue isKindOfClass:[SWRevealViewControllerSegueSetController class]])
          {

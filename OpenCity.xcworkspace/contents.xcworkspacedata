@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:customMarker.h">
+   </FileRef>
+   <FileRef
+      location = "group:customMarker.m">
+   </FileRef>
+   <FileRef
       location = "group:OpenCity.xcodeproj">
    </FileRef>
    <FileRef
