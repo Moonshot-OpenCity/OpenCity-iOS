@@ -14,10 +14,12 @@
 @property (strong, nonatomic) NSString *test;
 @property (strong, nonatomic) GMSMarker *marker;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
-@property (strong, nonatomic) IBOutlet UIImageView *thumbDownButton;
-@property (strong, nonatomic) IBOutlet UIImageView *thumbUpButton;
+@property (strong, nonatomic) IBOutlet UIButton *thumbUpButton;
+@property (strong, nonatomic) IBOutlet UIButton *thumbDownButton;
 @property (strong, nonatomic) IBOutlet UITextView *descriptionLabel;
+@property (strong, nonatomic) IBOutlet UILabel *scoreLabel;
 
 -(void)showMarkerData;
+@property (strong, nonatomic) IBOutlet UITextView *commentTextView;
 
 @end

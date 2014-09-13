@@ -48,25 +48,65 @@
                                 <action selector="cancelTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="6Pf-wL-J1c"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grey_thumb_down.png" translatesAutoresizingMaskIntoConstraints="NO" id="pn3-Ns-SYT">
-                            <rect key="frame" x="165" y="0.0" width="43" height="39"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mc-zy-iC0">
+                            <rect key="frame" x="163" y="156" width="52" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grey_thumb_up.png" translatesAutoresizingMaskIntoConstraints="NO" id="uvh-7o-ah4">
-                            <rect key="frame" x="216" y="-6" width="42" height="45"/>
+                            <state key="normal" title="Button" image="grey_thumb_down.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="thumbDownTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="Qiz-uc-wpT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMG-JD-vIm">
+                            <rect key="frame" x="208" y="151" width="50" height="45"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
+                            <state key="normal" title="Button" image="grey_thumb_up.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="thumbUpTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="9sR-7p-eZD"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtA-gX-fxr">
+                            <rect key="frame" x="20" y="163" width="135" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Commentaires:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miz-vy-9if">
+                            <rect key="frame" x="20" y="202" width="117" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ajoutez votre commentaire" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVa-5h-GB3">
+                            <rect key="frame" x="20" y="323" width="206" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Db8-6B-erg">
+                            <rect key="frame" x="20" y="352" width="238" height="62"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.97395125679347827" green="0.97395125679347827" blue="0.97395125679347827" alpha="1" colorSpace="calibratedRGB"/>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>
+                <outlet property="commentTextView" destination="Db8-6B-erg" id="AmP-2d-xHe"/>
                 <outlet property="descriptionLabel" destination="tQI-Pb-dQf" id="mSa-GS-mWq"/>
-                <outlet property="thumbDownButton" destination="pn3-Ns-SYT" id="FzN-kO-ZsY"/>
-                <outlet property="thumbUpButton" destination="uvh-7o-ah4" id="bCH-or-FzN"/>
+                <outlet property="scoreLabel" destination="UtA-gX-fxr" id="L1X-wT-smS"/>
+                <outlet property="thumbDownButton" destination="4mc-zy-iC0" id="Zw5-QW-D2O"/>
+                <outlet property="thumbUpButton" destination="uMG-JD-vIm" id="rBE-lc-eaW"/>
                 <outlet property="titleLabel" destination="gMi-Hs-KRX" id="Hs7-Y8-zKz"/>
             </connections>
         </view>
