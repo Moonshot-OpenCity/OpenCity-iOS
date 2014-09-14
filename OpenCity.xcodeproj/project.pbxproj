@@ -91,7 +91,6 @@
 		F0EE015219C1921600C4EE2D /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE014719C1921600C4EE2D /* AFURLRequestSerialization.m */; };
 		F0EE015319C1921600C4EE2D /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE014919C1921600C4EE2D /* AFURLResponseSerialization.m */; };
 		F0EE015419C1921600C4EE2D /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE014B19C1921600C4EE2D /* AFURLSessionManager.m */; };
-		F0EE015819C19B3A00C4EE2D /* city-night.png in Resources */ = {isa = PBXBuildFile; fileRef = F0EE015719C19B3A00C4EE2D /* city-night.png */; };
 		F0EE015B19C19BE500C4EE2D /* mapView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE015A19C19BE500C4EE2D /* mapView.m */; };
 		F0EE016019C1B40C00C4EE2D /* dataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE015F19C1B40C00C4EE2D /* dataClass.m */; };
 		F0EE016919C1C0D800C4EE2D /* locationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE016819C1C0D800C4EE2D /* locationVC.m */; };
@@ -245,7 +244,6 @@
 		F0EE014919C1921600C4EE2D /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = ../../AFNetworking/AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		F0EE014A19C1921600C4EE2D /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = ../../AFNetworking/AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
 		F0EE014B19C1921600C4EE2D /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = ../../AFNetworking/AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
-		F0EE015719C19B3A00C4EE2D /* city-night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "city-night.png"; path = "../../../Desktop/city-night.png"; sourceTree = "<group>"; };
 		F0EE015919C19BE500C4EE2D /* mapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mapView.h; sourceTree = "<group>"; };
 		F0EE015A19C19BE500C4EE2D /* mapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mapView.m; sourceTree = "<group>"; };
 		F0EE015E19C1B40C00C4EE2D /* dataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dataClass.h; sourceTree = "<group>"; };
@@ -372,7 +370,6 @@
 			isa = PBXGroup;
 			children = (
 				F0EE016E19C1DC2C00C4EE2D /* login-bg.jpg */,
-				F0EE015719C19B3A00C4EE2D /* city-night.png */,
 				F052CD0D19C06F7800A82D01 /* backgroundLogin.jpg */,
 				F052CCFF19C049F800A82D01 /* reveal-icon.png */,
 				F052CC7319BF396F00A82D01 /* OpenCity-Icon.png */,
@@ -663,7 +660,6 @@
 				F052CCCF19BF3D8300A82D01 /* OpenCity-Icon-48.png in Resources */,
 				F0EE016F19C1DC2C00C4EE2D /* login-bg.jpg in Resources */,
 				F052CCD819BF3D8300A82D01 /* OpenCity-Icon-114.png in Resources */,
-				F0EE015819C19B3A00C4EE2D /* city-night.png in Resources */,
 				F021E51719C434F000C6765F /* social77.png in Resources */,
 				F052CCF019BF53F800A82D01 /* background.png in Resources */,
 				F052CD0E19C06F7800A82D01 /* backgroundLogin.jpg in Resources */,

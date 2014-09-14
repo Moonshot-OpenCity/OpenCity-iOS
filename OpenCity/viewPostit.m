@@ -154,6 +154,18 @@
     }
 }
 
+- (IBAction)tapOutside:(id)sender
+{
+    [self.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+    self.lastScroll = 0.0;
+    [self.commentTextView resignFirstResponder];
+}
+
+- (IBAction)commentBegin:(id)sender {
+    UITextField *textField = (UITextField *)sender;
+    self.lastScroll = textField.frame.origin.y;
+    [self.scrollView setContentOffset:CGPointMake(0, self.lastScroll/3) animated:YES];
+}
 
 
 - (IBAction)cancelTapped:(id)sender

@@ -11,6 +11,7 @@
 
 @interface viewPostit : UIView
 
+@property (assign, nonatomic) float lastScroll;
 @property (strong, nonatomic) NSString *test;
 @property (strong, nonatomic) GMSMarker *marker;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
@@ -18,8 +19,9 @@
 @property (strong, nonatomic) IBOutlet UIButton *thumbDownButton;
 @property (strong, nonatomic) IBOutlet UITextView *descriptionLabel;
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UITextView *commentTextView;
 
 -(void)showMarkerData;
-@property (strong, nonatomic) IBOutlet UITextView *commentTextView;
 
 @end

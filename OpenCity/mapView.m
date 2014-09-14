@@ -69,6 +69,7 @@
                 [(viewPostit*)test showMarkerData];
             }
             [self.view addSubview:test];
+            [self.mapView_ clear];
         }
         else
         {
@@ -111,9 +112,14 @@
     
 }
 
-- (void) mapView:(GMSMapView *)mapView didChangeCameraPosition:(GMSCameraPosition *)position
+- (void) mapView:(GMSMapView *)mapView idleAtCameraPosition:(GMSCameraPosition *)position
 {
     self.camera = position;
+    [self refreshMap];
+}
+
+- (void) mapView:(GMSMapView *)mapView didChangeCameraPosition:(GMSCameraPosition *)position
+{
     self.marker.position = position.target;
 }
 
