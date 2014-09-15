@@ -69,7 +69,6 @@
                 [(viewPostit*)test showMarkerData];
             }
             [self.view addSubview:test];
-            [self.mapView_ clear];
         }
         else
         {
@@ -92,6 +91,7 @@
                  UIView *test = [[[NSBundle mainBundle] loadNibNamed:@"addPostitCView" owner:self options:nil] objectAtIndex:0];
                  test.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
                  obj.marker = marker;
+                 marker.map = nil;
                  [self.view addSubview:test];
              }];
         }
